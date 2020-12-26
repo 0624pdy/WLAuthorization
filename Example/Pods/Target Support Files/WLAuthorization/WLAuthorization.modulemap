@@ -1,0 +1,6 @@
+framework module WLAuthorization {
+  umbrella header "WLAuthorization-umbrella.h"
+
+  export *
+  module * { export * }
+}

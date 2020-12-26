@@ -1,0 +1,16 @@
+PODS:
+  - WLAuthorization (0.0.1)
+
+DEPENDENCIES:
+  - WLAuthorization (from `../`)
+
+EXTERNAL SOURCES:
+  WLAuthorization:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  WLAuthorization: 32648a660e7557edd067bd73e80f76a1f3e49305
+
+PODFILE CHECKSUM: 01093d6998c474b23ccdc25a35cf1266c3a24397
+
+COCOAPODS: 1.10.0

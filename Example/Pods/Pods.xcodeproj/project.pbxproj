@@ -1,0 +1,629 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		052EED1F8D9AC2A240A2408636040356 /* WLAuthorization-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E6806EED9C07CE441C0F2EA36FC96AFF /* WLAuthorization-dummy.m */; };
+		29E137166D94904DA45F7F3FE19C6615 /* MGAuthManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AB793A2442AFF8E480B6EC24325603E1 /* MGAuthManager.m */; };
+		3B2B47DD6FA35E8671B2BC7204542501 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807AB42934024C2B38B4DE7B3E452189 /* Contacts.framework */; };
+		46F6E7B16D23E92C4F2E2605D563AA27 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 632F402E5015A197E84753D1F991DA44 /* AssetsLibrary.framework */; };
+		52B708EA916A43F690C41D5FFB697B59 /* WLAuthorization-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E5BA04B3300F30E2D258B6330E1C65B9 /* WLAuthorization-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5844DBC48A44162EE2B5CD2CBB5C4492 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C214C44B444A3A02993DDF730F909389 /* Photos.framework */; };
+		598017B2D5EDCCA6F2E46795879E63FD /* Pods-WLAuthorization_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B41FE8E54AD912444FFF22FA542EAA8B /* Pods-WLAuthorization_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AA8F3E107A66A53621B142F0A6F14A8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DE92458C16D52493765C0A0B6982A5D /* AVFoundation.framework */; };
+		65E3FA4458CC4D6961A82689601C44B2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C30BECD76096C5CD28D882DBE3A4D8D /* CoreLocation.framework */; };
+		8632B21C04816C0F64E67A01D236FDC0 /* MGAuthManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8427CCA0C25E840E34B30650C8547EC3 /* MGAuthManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		901DAC0AFF6E8F165E81DDCFDE97806C /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFA6FD923134DF6143423AC5FB4892A0 /* CoreTelephony.framework */; };
+		9E97A1BE56FE67D3779A18169F69D71E /* Pods-WLAuthorization_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAA938094740AB15E5D023188A1BB28 /* Pods-WLAuthorization_Example-dummy.m */; };
+		B80A1773E0A461517295D3F2507E7CD7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CC87A20FDC0DCF0C64E83D6B5E657AA /* Foundation.framework */; };
+		D85D09ED9435EAF33D9A9310E541B486 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CC87A20FDC0DCF0C64E83D6B5E657AA /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B49E93CA1FDB2C6DBFB95C6C8F430AAA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3AE2272211AE30CB1AFC03B13D49EB7B;
+			remoteInfo = WLAuthorization;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		148B9BD14AD9CB4B2805D03F0266DFEA /* WLAuthorization-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WLAuthorization-prefix.pch"; sourceTree = "<group>"; };
+		3CAA938094740AB15E5D023188A1BB28 /* Pods-WLAuthorization_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WLAuthorization_Example-dummy.m"; sourceTree = "<group>"; };
+		4A4FC9247209E1E2822F8D95764C9F5D /* Pods-WLAuthorization_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WLAuthorization_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		54A84C92CABB2407326F175D97FB2570 /* Pods-WLAuthorization_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WLAuthorization_Example.release.xcconfig"; sourceTree = "<group>"; };
+		62F47AD07E7408B6BC3AD74F9640B11F /* Pods-WLAuthorization_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WLAuthorization_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		632F402E5015A197E84753D1F991DA44 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/AssetsLibrary.framework; sourceTree = DEVELOPER_DIR; };
+		63652B2F8C03408AC5F6105EC000506B /* WLAuthorization.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = WLAuthorization.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		6CC87A20FDC0DCF0C64E83D6B5E657AA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		70138DB5EC31269C60014201D6DE5DAE /* WLAuthorization.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WLAuthorization.release.xcconfig; sourceTree = "<group>"; };
+		76C7A6ACCD227A2170B841ECCE0FADE0 /* WLAuthorization-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "WLAuthorization-Info.plist"; sourceTree = "<group>"; };
+		79918E3AB054212AE51A9A47763923EF /* Pods-WLAuthorization_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WLAuthorization_Example-Info.plist"; sourceTree = "<group>"; };
+		79EFF12D78795C63076B64CF399765BE /* Pods_WLAuthorization_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WLAuthorization_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B2C89986F523540D842BA7F702F12EB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		807AB42934024C2B38B4DE7B3E452189 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Contacts.framework; sourceTree = DEVELOPER_DIR; };
+		8427CCA0C25E840E34B30650C8547EC3 /* MGAuthManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MGAuthManager.h; path = WLAuthorization/Classes/MGAuthManager.h; sourceTree = "<group>"; };
+		8737002DCD55C13B82AF689DA4134AF8 /* WLAuthorization.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WLAuthorization.debug.xcconfig; sourceTree = "<group>"; };
+		88FDEB2BF8CF698DE7E65A098C3A2513 /* Pods-WLAuthorization_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WLAuthorization_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		8E4F3569CA2D8E62F3C1F0306E98309B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		984E0674274425672E55DFDC254EDDB4 /* WLAuthorization.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = WLAuthorization.modulemap; sourceTree = "<group>"; };
+		9C30BECD76096C5CD28D882DBE3A4D8D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9DE92458C16D52493765C0A0B6982A5D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		A6A8F0D21EA8A63E682984DE36C445FC /* Pods-WLAuthorization_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WLAuthorization_Example-frameworks.sh"; sourceTree = "<group>"; };
+		AB793A2442AFF8E480B6EC24325603E1 /* MGAuthManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MGAuthManager.m; path = WLAuthorization/Classes/MGAuthManager.m; sourceTree = "<group>"; };
+		B41FE8E54AD912444FFF22FA542EAA8B /* Pods-WLAuthorization_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WLAuthorization_Example-umbrella.h"; sourceTree = "<group>"; };
+		BD1F84FD87C8EAD38576742704ECF2A1 /* Pods-WLAuthorization_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WLAuthorization_Example.modulemap"; sourceTree = "<group>"; };
+		C214C44B444A3A02993DDF730F909389 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Photos.framework; sourceTree = DEVELOPER_DIR; };
+		C91BA68C1B1F0FCBAED8E1078C7523BD /* WLAuthorization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WLAuthorization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5BA04B3300F30E2D258B6330E1C65B9 /* WLAuthorization-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WLAuthorization-umbrella.h"; sourceTree = "<group>"; };
+		E6806EED9C07CE441C0F2EA36FC96AFF /* WLAuthorization-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WLAuthorization-dummy.m"; sourceTree = "<group>"; };
+		EFA6FD923134DF6143423AC5FB4892A0 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5BFCB43F27F301346BA95BD125B3F3BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D85D09ED9435EAF33D9A9310E541B486 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		671AB1AC34919EAE6112E3303ABD4716 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46F6E7B16D23E92C4F2E2605D563AA27 /* AssetsLibrary.framework in Frameworks */,
+				5AA8F3E107A66A53621B142F0A6F14A8 /* AVFoundation.framework in Frameworks */,
+				3B2B47DD6FA35E8671B2BC7204542501 /* Contacts.framework in Frameworks */,
+				65E3FA4458CC4D6961A82689601C44B2 /* CoreLocation.framework in Frameworks */,
+				901DAC0AFF6E8F165E81DDCFDE97806C /* CoreTelephony.framework in Frameworks */,
+				B80A1773E0A461517295D3F2507E7CD7 /* Foundation.framework in Frameworks */,
+				5844DBC48A44162EE2B5CD2CBB5C4492 /* Photos.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C137CA586A92B28FF1D27C9213FBC75 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				632F402E5015A197E84753D1F991DA44 /* AssetsLibrary.framework */,
+				9DE92458C16D52493765C0A0B6982A5D /* AVFoundation.framework */,
+				807AB42934024C2B38B4DE7B3E452189 /* Contacts.framework */,
+				9C30BECD76096C5CD28D882DBE3A4D8D /* CoreLocation.framework */,
+				EFA6FD923134DF6143423AC5FB4892A0 /* CoreTelephony.framework */,
+				6CC87A20FDC0DCF0C64E83D6B5E657AA /* Foundation.framework */,
+				C214C44B444A3A02993DDF730F909389 /* Photos.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		3ACB3CB74596A080A9F56A2212EB315F /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CFA0A23A373DBEC405099FE56CDE8247 /* Pods-WLAuthorization_Example */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		3E62B7145B78E3D571A9619B46AF63E4 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EA98EA09C99664AA4844C2DCADE7625B /* WLAuthorization */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		5B158BE4B1416615C4871673C4A93053 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				79EFF12D78795C63076B64CF399765BE /* Pods_WLAuthorization_Example.framework */,
+				C91BA68C1B1F0FCBAED8E1078C7523BD /* WLAuthorization.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		629D1F72B8F497BA23AE4B4B676DDD47 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				7B2C89986F523540D842BA7F702F12EB /* LICENSE */,
+				8E4F3569CA2D8E62F3C1F0306E98309B /* README.md */,
+				63652B2F8C03408AC5F6105EC000506B /* WLAuthorization.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		82280BA7513A01CBCAD22DE32FBA3CD9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				984E0674274425672E55DFDC254EDDB4 /* WLAuthorization.modulemap */,
+				E6806EED9C07CE441C0F2EA36FC96AFF /* WLAuthorization-dummy.m */,
+				76C7A6ACCD227A2170B841ECCE0FADE0 /* WLAuthorization-Info.plist */,
+				148B9BD14AD9CB4B2805D03F0266DFEA /* WLAuthorization-prefix.pch */,
+				E5BA04B3300F30E2D258B6330E1C65B9 /* WLAuthorization-umbrella.h */,
+				8737002DCD55C13B82AF689DA4134AF8 /* WLAuthorization.debug.xcconfig */,
+				70138DB5EC31269C60014201D6DE5DAE /* WLAuthorization.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/WLAuthorization";
+			sourceTree = "<group>";
+		};
+		8275CCB4E8732497B1021FCBC240F3C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1C137CA586A92B28FF1D27C9213FBC75 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				3E62B7145B78E3D571A9619B46AF63E4 /* Development Pods */,
+				8275CCB4E8732497B1021FCBC240F3C2 /* Frameworks */,
+				5B158BE4B1416615C4871673C4A93053 /* Products */,
+				3ACB3CB74596A080A9F56A2212EB315F /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		CFA0A23A373DBEC405099FE56CDE8247 /* Pods-WLAuthorization_Example */ = {
+			isa = PBXGroup;
+			children = (
+				BD1F84FD87C8EAD38576742704ECF2A1 /* Pods-WLAuthorization_Example.modulemap */,
+				62F47AD07E7408B6BC3AD74F9640B11F /* Pods-WLAuthorization_Example-acknowledgements.markdown */,
+				88FDEB2BF8CF698DE7E65A098C3A2513 /* Pods-WLAuthorization_Example-acknowledgements.plist */,
+				3CAA938094740AB15E5D023188A1BB28 /* Pods-WLAuthorization_Example-dummy.m */,
+				A6A8F0D21EA8A63E682984DE36C445FC /* Pods-WLAuthorization_Example-frameworks.sh */,
+				79918E3AB054212AE51A9A47763923EF /* Pods-WLAuthorization_Example-Info.plist */,
+				B41FE8E54AD912444FFF22FA542EAA8B /* Pods-WLAuthorization_Example-umbrella.h */,
+				4A4FC9247209E1E2822F8D95764C9F5D /* Pods-WLAuthorization_Example.debug.xcconfig */,
+				54A84C92CABB2407326F175D97FB2570 /* Pods-WLAuthorization_Example.release.xcconfig */,
+			);
+			name = "Pods-WLAuthorization_Example";
+			path = "Target Support Files/Pods-WLAuthorization_Example";
+			sourceTree = "<group>";
+		};
+		EA98EA09C99664AA4844C2DCADE7625B /* WLAuthorization */ = {
+			isa = PBXGroup;
+			children = (
+				8427CCA0C25E840E34B30650C8547EC3 /* MGAuthManager.h */,
+				AB793A2442AFF8E480B6EC24325603E1 /* MGAuthManager.m */,
+				629D1F72B8F497BA23AE4B4B676DDD47 /* Pod */,
+				82280BA7513A01CBCAD22DE32FBA3CD9 /* Support Files */,
+			);
+			name = WLAuthorization;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		5E810913132D5A1ED5819368AFD34B1C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				598017B2D5EDCCA6F2E46795879E63FD /* Pods-WLAuthorization_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDD0D8145086BA41477727507D9567FC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8632B21C04816C0F64E67A01D236FDC0 /* MGAuthManager.h in Headers */,
+				52B708EA916A43F690C41D5FFB697B59 /* WLAuthorization-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0A592C99D22E7E55838C709AD2BD5DCF /* Pods-WLAuthorization_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7DCDC62DEF3782EDD4E9CAA860984233 /* Build configuration list for PBXNativeTarget "Pods-WLAuthorization_Example" */;
+			buildPhases = (
+				5E810913132D5A1ED5819368AFD34B1C /* Headers */,
+				88F394320581AA8138B458A1CE77AB51 /* Sources */,
+				5BFCB43F27F301346BA95BD125B3F3BD /* Frameworks */,
+				F3B81B56AF2912B6E5E5DAB3DD1C0527 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				48F5C4D03EF8BD71BF98DB9344158374 /* PBXTargetDependency */,
+			);
+			name = "Pods-WLAuthorization_Example";
+			productName = "Pods-WLAuthorization_Example";
+			productReference = 79EFF12D78795C63076B64CF399765BE /* Pods_WLAuthorization_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3AE2272211AE30CB1AFC03B13D49EB7B /* WLAuthorization */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC1F77794612B933EB43489AD994D6C8 /* Build configuration list for PBXNativeTarget "WLAuthorization" */;
+			buildPhases = (
+				BDD0D8145086BA41477727507D9567FC /* Headers */,
+				3AB8562FA1A0C669D180377358C52D21 /* Sources */,
+				671AB1AC34919EAE6112E3303ABD4716 /* Frameworks */,
+				4381D806EAE904943C296C96246CA21A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WLAuthorization;
+			productName = WLAuthorization;
+			productReference = C91BA68C1B1F0FCBAED8E1078C7523BD /* WLAuthorization.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 5B158BE4B1416615C4871673C4A93053 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0A592C99D22E7E55838C709AD2BD5DCF /* Pods-WLAuthorization_Example */,
+				3AE2272211AE30CB1AFC03B13D49EB7B /* WLAuthorization */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4381D806EAE904943C296C96246CA21A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3B81B56AF2912B6E5E5DAB3DD1C0527 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3AB8562FA1A0C669D180377358C52D21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29E137166D94904DA45F7F3FE19C6615 /* MGAuthManager.m in Sources */,
+				052EED1F8D9AC2A240A2408636040356 /* WLAuthorization-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88F394320581AA8138B458A1CE77AB51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E97A1BE56FE67D3779A18169F69D71E /* Pods-WLAuthorization_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		48F5C4D03EF8BD71BF98DB9344158374 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WLAuthorization;
+			target = 3AE2272211AE30CB1AFC03B13D49EB7B /* WLAuthorization */;
+			targetProxy = B49E93CA1FDB2C6DBFB95C6C8F430AAA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1E81B35851FC90318537A57948B64E8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54A84C92CABB2407326F175D97FB2570 /* Pods-WLAuthorization_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-WLAuthorization_Example/Pods-WLAuthorization_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WLAuthorization_Example/Pods-WLAuthorization_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		A32E4C68009950B5EE51B42775C46427 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8737002DCD55C13B82AF689DA4134AF8 /* WLAuthorization.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/WLAuthorization/WLAuthorization-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/WLAuthorization/WLAuthorization-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/WLAuthorization/WLAuthorization.modulemap";
+				PRODUCT_MODULE_NAME = WLAuthorization;
+				PRODUCT_NAME = WLAuthorization;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BBC64A05BC0B5F1DE0752A8C8EBF19E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70138DB5EC31269C60014201D6DE5DAE /* WLAuthorization.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/WLAuthorization/WLAuthorization-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/WLAuthorization/WLAuthorization-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/WLAuthorization/WLAuthorization.modulemap";
+				PRODUCT_MODULE_NAME = WLAuthorization;
+				PRODUCT_NAME = WLAuthorization;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		D2381EC73A4C6472B691DF593CC96FA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A4FC9247209E1E2822F8D95764C9F5D /* Pods-WLAuthorization_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-WLAuthorization_Example/Pods-WLAuthorization_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WLAuthorization_Example/Pods-WLAuthorization_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */,
+				CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7DCDC62DEF3782EDD4E9CAA860984233 /* Build configuration list for PBXNativeTarget "Pods-WLAuthorization_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2381EC73A4C6472B691DF593CC96FA8 /* Debug */,
+				1E81B35851FC90318537A57948B64E8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC1F77794612B933EB43489AD994D6C8 /* Build configuration list for PBXNativeTarget "WLAuthorization" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A32E4C68009950B5EE51B42775C46427 /* Debug */,
+				BBC64A05BC0B5F1DE0752A8C8EBF19E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
