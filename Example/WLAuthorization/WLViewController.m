@@ -8,20 +8,32 @@
 
 #import "WLViewController.h"
 
+#import <WLAuthorization/WLAuthorization.h>
+
 @interface WLViewController ()
 
 @end
 
 @implementation WLViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    //NSLog(@"%@", [[NSBundle mainBundle] infoDictionary]);
+    
+    WLLocationConfig *config = [WLLocationConfig defaultConfig];
+    config.requestType = 1;
+    
+    [WLLocationPermission sharedPermission].config = config;
+    [[WLLocationPermission sharedPermission] requestAuthorization:^(WLAuthorizationResult *result) {
+        if (result.granted) {
+            
+        }
+    }];
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }

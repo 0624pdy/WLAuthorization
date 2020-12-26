@@ -9,7 +9,9 @@
     "file": "LICENSE"
   },
   "authors": {
-    "0624pdy": "pengduanyang@jze100.com"
+    "0624pdy": "0624pdy@sina.com",
+    "0530pdy": "pengduanyang@jze100.com",
+    "0711pdy": "857466752@qq.com"
   },
   "source": {
     "git": "https://github.com/0624pdy/WLAuthorization.git",
@@ -20,11 +22,29 @@
   },
   "source_files": "WLAuthorization/Classes/**/*",
   "frameworks": [
+    "UIKit",
+    "Foundation",
+    "CoreGraphics",
     "Contacts",
-    "CoreLocation",
     "AVFoundation",
     "AssetsLibrary",
     "Photos",
     "CoreTelephony"
+  ],
+  "subspecs": [
+    {
+      "name": "Base",
+      "source_files": "WLAuthorization/Classes/Base/*"
+    },
+    {
+      "name": "Location",
+      "frameworks": "CoreLocation",
+      "dependencies": {
+        "WLAuthorization/Base": [
+
+        ]
+      },
+      "source_files": "WLAuthorization/Classes/Location/*"
+    }
   ]
 }

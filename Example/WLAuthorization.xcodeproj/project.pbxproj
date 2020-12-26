@@ -59,7 +59,7 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		720CAD725A38C9E0A9FB6367 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9412D042DCB8F2E64B4FE4E3 /* Pods-WLAuthorization_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WLAuthorization_Example.release.xcconfig"; path = "Target Support Files/Pods-WLAuthorization_Example/Pods-WLAuthorization_Example.release.xcconfig"; sourceTree = "<group>"; };
 		A86CE8E7A4E777C6ABAA41BD /* WLAuthorization.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = WLAuthorization.podspec; path = ../WLAuthorization.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		EBC3A0D66332CCA9E109F2DE /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -90,6 +90,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02DEE0962597161F00B865FE /* Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
@@ -128,11 +135,9 @@
 			children = (
 				6003F59C195388D20070C39A /* WLAppDelegate.h */,
 				6003F59D195388D20070C39A /* WLAppDelegate.m */,
-				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* WLViewController.h */,
 				6003F5A6195388D20070C39A /* WLViewController.m */,
-				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
-				6003F5A8195388D20070C39A /* Images.xcassets */,
+				02DEE0962597161F00B865FE /* Files */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
 			name = "Example for WLAuthorization";
@@ -142,6 +147,9 @@
 		6003F594195388D20070C39A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6003F5A8195388D20070C39A /* Images.xcassets */,
+				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
+				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F595195388D20070C39A /* WLAuthorization-Info.plist */,
 				6003F596195388D20070C39A /* InfoPlist.strings */,
 				6003F599195388D20070C39A /* main.m */,
@@ -296,10 +304,12 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-WLAuthorization_Example/Pods-WLAuthorization_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/JLAuthorizationManager/JLAuthorizationManager.framework",
 				"${BUILT_PRODUCTS_DIR}/WLAuthorization/WLAuthorization.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JLAuthorizationManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WLAuthorization.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,3 +1,6 @@
+source 'https://github.com/CocoaPods/Specs.git'
+source 'https://github.com/0624pdy/WLAuthorization.git'
+
 use_frameworks!
 
 platform :ios, '9.0'
@@ -5,6 +8,18 @@ platform :ios, '9.0'
 target 'WLAuthorization_Example' do
   
   pod 'WLAuthorization', :path => '../'
-  #pod 'WLAutnorization'
+  pod 'WLAuthorization/Location', :path => '../'
+#  pod 'WLAuthorization', '0.0.1'
+  
+  
+#  pod 'AuthorizationManager'
+#  pod 'AuthorizationTools'
+#  pod 'CCPAuthorization'
+#  pod 'DeviceAuthorizationManager'
+#  pod 'DHAuthorizationManager'
+#  pod 'ECAuthorizationTools'
+#  pod 'GKAuthorizationTool'
+#  pod 'iOS-OAuth2Authorization'
+  pod 'JLAuthorizationManager'
   
 end

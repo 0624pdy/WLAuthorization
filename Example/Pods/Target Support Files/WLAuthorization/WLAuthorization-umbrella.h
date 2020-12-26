@@ -10,7 +10,18 @@
 #endif
 #endif
 
+#import "WLAuthorizationProtocol.h"
+#import "WLAuthorizationResult.h"
+#import "WLAuthorizationTypes.h"
+#import "WLBasePermission.h"
+#import "WLLocationPermission.h"
 #import "MGAuthManager.h"
+#import "WLAuthorization.h"
+#import "WLAuthorizationProtocol.h"
+#import "WLAuthorizationResult.h"
+#import "WLAuthorizationTypes.h"
+#import "WLBasePermission.h"
+#import "WLLocationPermission.h"
 
 FOUNDATION_EXPORT double WLAuthorizationVersionNumber;
 FOUNDATION_EXPORT const unsigned char WLAuthorizationVersionString[];

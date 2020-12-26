@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   s.source              = { :git => 'https://github.com/0624pdy/WLAuthorization.git', :tag => s.version.to_s }
   s.ios.deployment_target = '9.0'
   s.source_files        = 'WLAuthorization/Classes/**/*'
-  s.frameworks          = 'Contacts', 'CoreLocation', 'AVFoundation', 'AssetsLibrary', 'Photos', 'CoreTelephony'
+  s.frameworks          = 'UIKit', 'Foundation', 'CoreGraphics', 'Contacts', 'AVFoundation', 'AssetsLibrary', 'Photos', 'CoreTelephony'
   
   # s.resource_bundles = {
   #   'WLAuthorization' => ['WLAuthorization/Assets/*.png']
@@ -34,4 +34,19 @@ Pod::Spec.new do |s|
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+  
+  
+  
+  
+  s.subspec 'Base' do |base|
+      base.source_files = 'WLAuthorization/Classes/Base/*'
+  end
+  
+  
+  s.subspec 'Location' do |location|
+      location.frameworks   = 'CoreLocation'
+      location.dependency 'WLAuthorization/Base'
+      location.source_files = 'WLAuthorization/Classes/Location/*'
+  end
+  
 end
