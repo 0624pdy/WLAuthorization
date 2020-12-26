@@ -17,7 +17,11 @@ Pod::Spec.new do |s|
 
   s.homepage            = 'https://github.com/0624pdy/WLAuthorization'
   s.license             = { :type => 'MIT', :file => 'LICENSE' }
-  s.author              = { '0624pdy' => 'pengduanyang@jze100.com' }
+  s.author              = {
+                            '0624pdy' => '0624pdy@sina.com',
+                            '0530pdy' => 'pengduanyang@jze100.com',
+                            '0711pdy' => '857466752@qq.com'
+                          }
   s.source              = { :git => 'https://github.com/0624pdy/WLAuthorization.git', :tag => s.version.to_s }
   s.ios.deployment_target = '9.0'
   s.source_files        = 'WLAuthorization/Classes/**/*'
