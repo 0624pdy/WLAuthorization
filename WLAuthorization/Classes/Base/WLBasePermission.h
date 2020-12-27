@@ -13,10 +13,13 @@
 
 @class WLAuthorizationResult;
 
+typedef void(^WLAuthResultBlock)(WLAuthorizationResult *result);
+
 @interface WLBasePermission : NSObject < WLAuthorizationProtocol >
 
-- (BOOL)requestAuthorization:(void(^)(WLAuthorizationResult *result))completion NS_REQUIRES_SUPER;
+- (BOOL)requestAuthorization:(WLAuthResultBlock)completion NS_REQUIRES_SUPER;
 
+@property (nonatomic,copy) WLAuthResultBlock resultBlock;
 @property (nonatomic,strong) WLAuthorizationResult *result;
 
 @end

@@ -31,7 +31,7 @@
 + (WLAuthorizationType)authorizationType {
     return WLAuthorizationType_Location;
 }
-- (BOOL)requestAuthorization:(void (^)(WLAuthorizationResult *))completion {
+- (BOOL)requestAuthorization:(WLAuthResultBlock)completion {
     
     BOOL isKeySet = [super requestAuthorization:completion];
     
@@ -70,6 +70,10 @@
     
     return self.result.granted;
 }
+
+/**
+ *  @param isCallback - 是否是代理的回调
+ */
 - (void)handleStatus:(CLAuthorizationStatus)status isCallback:(BOOL)isCallback {
     switch (status) {
         case kCLAuthorizationStatusNotDetermined: {
@@ -128,6 +132,13 @@
         default:
             break;
     }
+    
+    if (isCallback && self.result.previousStatus != self.result.currentStatus) {
+        //回调
+        if (self.resultBlock) {
+            self.resultBlock(self.result);
+        }
+    }
 }
 
 
@@ -138,14 +149,18 @@
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_14_0
 - (void)locationManagerDidChangeAuthorization:(CLLocationManager *)manager {
     if (@available(iOS 14.0, *)) {
-        [self handleStatus:manager.authorizationStatus isCallback:YES];
+        if (manager.authorizationStatus != kCLAuthorizationStatusNotDetermined) {
+            [self handleStatus:manager.authorizationStatus isCallback:YES];
+        }
     } else {
         // Fallback on earlier versions
     }
 }
 #else
 - (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
-    [self handleStatus:status isCallback:YES];
+    if (status != kCLAuthorizationStatusNotDetermined) {
+        [self handleStatus:status isCallback:YES];
+    }
 }
 #endif
 

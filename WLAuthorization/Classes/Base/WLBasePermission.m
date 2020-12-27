@@ -49,7 +49,9 @@
 
 #pragma mark -
 
-- (BOOL)requestAuthorization:(void (^)(WLAuthorizationResult *))completion {
+- (BOOL)requestAuthorization:(WLAuthResultBlock)completion {
+    _resultBlock = completion;
+    
     return [[self class] hasSpecificPermissionKeyFromInfoPlist];
 }
 
