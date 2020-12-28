@@ -15,6 +15,7 @@
 #import "WLBasePermission.h"
 #import "WLAuthorizationResult.h"
 
-#import "WLLocationPermission.h"
+#import "WLLocationPermission.h"    //定位
+#import "WLCameraPermission.h"      //相机
 
 #endif /* WLAuthorization_h */

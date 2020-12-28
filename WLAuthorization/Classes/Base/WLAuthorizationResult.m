@@ -22,6 +22,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
+        //初始化：两个都设置为未知状态
         _previousStatus = WLAuthorizationStatus_Unknown;
         _currentStatus  = WLAuthorizationStatus_Unknown;
     }
@@ -29,16 +30,16 @@
 }
 + (instancetype)withStatus:(WLAuthorizationStatus)status message:(NSString *)message {
     WLAuthorizationResult *model = [[WLAuthorizationResult alloc] init];
-    
+     
     [model updateStatus:status message:message];
     
     return model;
 }
 - (void)updateStatus:(WLAuthorizationStatus)status message:(NSString *)message {
     _previousStatus = _currentStatus;
-    _currentStatus = status;
-    _message = message;
-    _granted = (_currentStatus == WLAuthorizationStatus_Authorized);
+    _currentStatus  = status;
+    _message        = message;
+    _granted        = (_currentStatus == WLAuthorizationStatus_Authorized);
 }
 
 @end

@@ -34,4 +34,9 @@
  */
 @property (nonatomic,class,readonly) BOOL hasSpecificPermissionKeyFromInfoPlist;
 
+/**
+ *  当权限被禁用时，可以调用该方法展示弹窗询问是否跳转到设置界面
+ */
+- (void)alertWithMessage:(NSString *)message cancel:(NSString *)cancelTitle confirmTitle:(NSString *)confirmTitle;
+
 @end

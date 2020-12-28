@@ -12,9 +12,30 @@
 
 #import "WLAuthorizationResult.h"
 
+
+
+
+
+@implementation WLLocationConfig
+
++ (instancetype)configWithName:(NSString *)name {
+    WLLocationConfig *config = [super configWithName:name];
+    if (config) {
+        config.requestType = WLAuthRequestType_Always;
+    }
+    return config;
+}
+
+@end
+
+
+
+
+
 @interface WLLocationPermission () < CLLocationManagerDelegate >
 
 @property (nonatomic,strong) CLLocationManager *locationManager;
+@property (nonatomic,strong) WLLocationConfig *config;
 
 @end
 
@@ -31,7 +52,11 @@
 + (WLAuthorizationType)authorizationType {
     return WLAuthorizationType_Location;
 }
-- (BOOL)requestAuthorization:(WLAuthResultBlock)completion {
++ (NSString *)name {
+    return @"定位";
+}
+- (BOOL)requestAuthorization:(WLAuthResultBlock)completion withConfig:(void (^)(WLLocationConfig *))config {
+    self.configBlock = config;
     
     BOOL isKeySet = [super requestAuthorization:completion];
     
@@ -64,11 +89,14 @@
     }
     
     //回调
-    if (completion) {
+    if (completion && self.result.currentStatus == WLAuthorizationStatus_Authorized) {
         completion(self.result);
     }
     
     return self.result.granted;
+}
+- (BOOL)requestAuthorization:(WLAuthResultBlock)completion {
+    return [self requestAuthorization:completion withConfig:nil];
 }
 
 /**
@@ -78,10 +106,12 @@
     switch (status) {
         case kCLAuthorizationStatusNotDetermined: {
             self.result = [WLAuthorizationResult withStatus:WLAuthorizationStatus_NotDetermined message:@"未请求过权限"];
-            if (_config.requestType == 0) {
+            if (self.config.requestType == WLAuthRequestType_Always) {
                 [self.locationManager requestAlwaysAuthorization];
-            } else {
+            } else if (self.config.requestType == WLAuthRequestType_WhenInUse) {
                 [self.locationManager requestWhenInUseAuthorization];
+            } else {
+                [self.locationManager requestAlwaysAuthorization];
             }
         }
             break;
@@ -98,6 +128,11 @@
                 [self.result updateStatus:WLAuthorizationStatus_Denied message:@"已拒绝"];
             } else {
                 self.result = [WLAuthorizationResult withStatus:WLAuthorizationStatus_Denied message:@"已拒绝"];
+                
+                if (self.config.openSettings_ifNeeded) {
+                    NSString *message = [NSString stringWithFormat:@"您已拒绝APP访问您的%@，请到\n[设置 - 隐私 - 定位]\n中开启权限", [WLLocationPermission name]];
+                    [self alertWithMessage:message cancel:@"取消" confirmTitle:@"去设置"];
+                }
             }
         }
             break;
@@ -143,6 +178,7 @@
 
 
 
+
  
 #pragma mark - CLLocationManagerDelegate
 
@@ -152,8 +188,6 @@
         if (manager.authorizationStatus != kCLAuthorizationStatusNotDetermined) {
             [self handleStatus:manager.authorizationStatus isCallback:YES];
         }
-    } else {
-        // Fallback on earlier versions
     }
 }
 #else
@@ -177,23 +211,13 @@
     }
     return _locationManager;
 }
-
-@end
-
-
-
-
-
-
-@implementation WLLocationConfig
-
-+ (WLLocationConfig *)defaultConfig {
-    WLLocationConfig *config = [[WLLocationConfig alloc] init];
+- (void)setConfigBlock:(WLAuthConfigBlock)configBlock {
+    [super setConfigBlock:configBlock];
     
-    config.requestType = 1;
-    config.openSettingsIfNeeded = YES;
-    
-    return config;
+    if (configBlock) {
+        _config = [WLLocationConfig configWithName:@"定位"];
+        configBlock(_config);
+    }
 }
 
 @end

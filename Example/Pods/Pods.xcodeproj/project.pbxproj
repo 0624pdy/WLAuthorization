@@ -8,59 +8,63 @@
 
 /* Begin PBXBuildFile section */
 		028B663A148250613190E4761FEE1C27 /* JLMotionPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC8479527E36D89A6494F7A5501AB30 /* JLMotionPermission.m */; };
+		0A0FFAE39F6EEA6960FEF7F87CB5E9B5 /* WLAuthorization.h in Headers */ = {isa = PBXBuildFile; fileRef = B6BB9B0884631D823D948BBC8F136FAD /* WLAuthorization.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0E34DAAB39D41DB52F4EBECC03114F83 /* JLContactPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = C864E92938901F3A1B99129B3E6E3B50 /* JLContactPermission.m */; };
 		14BFACE4E9DC0FE565A1FEA0E19F47D9 /* JLAuthorizationManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 169BB61BE8C60968758F16180855A3E0 /* JLAuthorizationManager-dummy.m */; };
 		196CC692A1C98AA87F82E5D31B93598E /* JLConstant.h in Headers */ = {isa = PBXBuildFile; fileRef = 86C81632DE11D7E12321BCF1ABD6FFC7 /* JLConstant.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		19DBD4C9B6E994A419D9D7D130AEFD80 /* JLAuthorizationProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = B8832FD2F5346876B365CF294D3181DF /* JLAuthorizationProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		19EF5BB5169D06C6DA1E5BBD7AD404A9 /* MGAuthManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AAADFFCCE201B56A7D3A424E65EC1036 /* MGAuthManager.m */; };
 		1AF3AAC8BAA2178ACB0F56FE39EE2D54 /* JLSpeechRecognizerPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B5D8936948358E832AA5EC5362E187 /* JLSpeechRecognizerPermission.m */; };
-		1E835FA93016CE0D14F9701593BCECE3 /* WLLocationPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FC885D08D4B1826C1058DE36784DC95 /* WLLocationPermission.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1B9546243824B3FC495D8EFC511D7486 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58713D6CE83096227BBF4A63E4F3ECFD /* CoreTelephony.framework */; };
 		22C3D261F7D78224D788AED7A1AF7F15 /* JLContactPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = 5405A6A5C032D40A7142F8558D52FA80 /* JLContactPermission.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22F74FE175D657D81DA095D17AB85D80 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69D26FB7F974677D6F052C268789E5D8 /* UIKit.framework */; };
 		24CD08B1C7060848BB74E0DCE80B3E19 /* JLCameraPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = B8B29E58AD8CA3B026926D62449941FF /* JLCameraPermission.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		25012C10B45BCA217920243A87F8A0DB /* WLLocationPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FE52557D51319B9AD35A56494E38C8F /* WLLocationPermission.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		252C992F6FA36201D94DE5203088119F /* JLCalendarPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C3ED2EAB4C095890D36544B45DAE92A /* JLCalendarPermission.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2656D9AFDA7E8C080136A6C93BB2F3BB /* JLBluetoothPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B65C2BCD1C776ADE8307BA090CC2185 /* JLBluetoothPermission.m */; };
-		2D90D51C5D5D62418092B0D6E6864DF3 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE8BF216041980822A0DA717AE51A74A /* Photos.framework */; };
-		2DF74E6CBAA8E6A064D8805D366BA886 /* WLAuthorization-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3B1217A5A71788627BCB593D6B6159 /* WLAuthorization-dummy.m */; };
+		2A554660287ED51CC16C757D955BF92F /* WLCameraPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = B446A53AEEE8AEA929407CA95CFABB4C /* WLCameraPermission.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2EC5C0BD20920DAF3B050092CAB26AA9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C88E216BF15E894A96AE86A6B9D80458 /* Foundation.framework */; };
 		31C0D189B4F4F444BAE1B2D2F78C7A82 /* JLReminderPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = 06C433B9C48F01B2028D77CDC341E384 /* JLReminderPermission.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		38DBD5BEF94A347D354F559AEF2908B0 /* WLLocationPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A6A481C7B61F51620D7438BE478EC0 /* WLLocationPermission.m */; };
+		3A307C0D7B73E3CF0161138648102CEE /* WLLocationPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0CA9654E8130360BB4C0CB6C28F941 /* WLLocationPermission.m */; };
+		41F8CA90D01BB807C9F342AE1E39FAF0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D3DF2B91CCE7C444084D05F7757695 /* CoreLocation.framework */; };
+		43570B8BB72C8850ADD870CB41D596AF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E1E3AA6994BEB9D6A0C21D70491BC1C /* AVFoundation.framework */; };
+		455DCC1DC0DFC2C141671368C04A4D60 /* WLAuthorizationTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DA60CB708FE8EED212C48FF5F1278A1 /* WLAuthorizationTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4B9802F0C6BA921BE579814C6995C0BC /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C2F90115361AB5F3349421D0BB3948 /* Contacts.framework */; };
 		4C4058E84290D8F79BF77CEA0BFDA691 /* JLLocationInUsePermission.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AEC9A202D6D90FFDF1255A52780DDB4 /* JLLocationInUsePermission.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4C6928B2531F71B4CD28239DF1604472 /* Pods-WLAuthorization_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B41FE8E54AD912444FFF22FA542EAA8B /* Pods-WLAuthorization_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		518844273869756C738B39C784B3FC6E /* JLAppleMusicPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = C76E511094EA34133D7CA04BBA21C737 /* JLAppleMusicPermission.m */; };
 		5390A251A51D41A6A6375A7526B287E9 /* JLBluetoothPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = 27B402B3106BD93C4943012134CE2BB6 /* JLBluetoothPermission.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5A8964F9380C537B9E827F14F11A812D /* WLAuthorization.h in Headers */ = {isa = PBXBuildFile; fileRef = 226A337AB85DF8AA1C403632D6978FCC /* WLAuthorization.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5C041AD31165905F3F9115C849A0C1D9 /* JLSiriPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = 89296FC852C0ED178E0C0CBC5D4134E4 /* JLSiriPermission.m */; };
-		613F34AD92660E8EA5141D7792720930 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69D26FB7F974677D6F052C268789E5D8 /* UIKit.framework */; };
-		63DE66CEC04E85D9574C033EDCCCB2BE /* MGAuthManager.h in Headers */ = {isa = PBXBuildFile; fileRef = ED573599B33AF54D4F4212F9D4A0F629 /* MGAuthManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		665668EF6DB8547F02AF38FB429CF30C /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6220467F0424E4AAD18FF4F4C1690108 /* AssetsLibrary.framework */; };
-		66CC4C9AE9B0A229440C1F9D16FA87B0 /* WLAuthorization-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E973054F65B0628C2F422272BAD2A415 /* WLAuthorization-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5FDF5BD92CB259254D6D796E0E1299E5 /* WLAuthorizationProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = E3146BA2BD8D32B45724FEA3F287E39A /* WLAuthorizationProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		62520172A932BEF55E2BB9D894B44265 /* WLAuthorizationResult.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5E4F8F9C74089071594924D1253143 /* WLAuthorizationResult.m */; };
+		68BDD4EFF922F7BAD7F545995DBE405E /* WLAuthorization-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 19ECDDA7D8F78F3A2FD10204BE102A91 /* WLAuthorization-dummy.m */; };
 		6B8D30A71D9715A1693D5E82982F8EA1 /* JLBluetoothPeripheralPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = 800C769AFCD364E50940FDBCA640457C /* JLBluetoothPeripheralPermission.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		73C6846C77FA7476D9DF5C9DBD653FC4 /* WLAuthorizationProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 568197ED5B91BCAA817475B83F722998 /* WLAuthorizationProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6CB2408956F3AFD562FEAD7F1D172EE6 /* MGAuthManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E4BFC96E852FEDC5CC954559528A8A7 /* MGAuthManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74BAB79268D139659DAF25373744B356 /* JLLocationAlwaysPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = 77CFBF36FCD1EE48B3B79A62A5D95921 /* JLLocationAlwaysPermission.m */; };
 		7D9FBC4FA6A7F85A13F8143D6FAE598F /* JLPhotosPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = 80ACE9F7206A7E8D8E86E46421B419ED /* JLPhotosPermission.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7EBF7090BFFC5D235CAD40B73B556D43 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C2F90115361AB5F3349421D0BB3948 /* Contacts.framework */; };
-		7EC4724FD7D82167FA662C50C3CBA39D /* WLAuthorizationResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A9E3FCC468F075C9FE6438E66E481E0 /* WLAuthorizationResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8554A0ACFC18858E78124DD9F35CBFD8 /* JLLocationAlwaysPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = 1176D5CE4BB99837904D2863E587079D /* JLLocationAlwaysPermission.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		86BB0EE35F01DC8DB2577A1D39690A5C /* JLAuthorizationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A0D82C5D1BA07FC9691C2E16BE4A0D45 /* JLAuthorizationManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		879BF36C88F30C63CD3F6FCCBB385FB2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C88E216BF15E894A96AE86A6B9D80458 /* Foundation.framework */; };
+		88850349B543576F11FC39255731999A /* WLAuthorizationResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D53E38EE11B5A502035A2456DF30460 /* WLAuthorizationResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		899D8EA4FD95BCAF87C7B9ED1E8A1E45 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE8BF216041980822A0DA717AE51A74A /* Photos.framework */; };
 		8A5D29729DB50A22874B1DEF73E610F9 /* JLCellularNetWorkPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6E6F87D66F892E26C1422820644835 /* JLCellularNetWorkPermission.m */; };
 		8B1E8C09678F1D2FA90FA6E01EF322A0 /* JLNotificationPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BA4E16412DDAD4DC4376AA97361FF7 /* JLNotificationPermission.m */; };
-		8DD4C93373F51261C587387FCC8E6127 /* WLAuthorizationResult.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAC598A2A16FCAB4508E2A8652CBF1C /* WLAuthorizationResult.m */; };
+		8B2A02700F36528C0EA3B5619E098D23 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E11BBB4549BB5CC827A0A3B080F1F64D /* CoreGraphics.framework */; };
 		8F942FA5F6D02CD9F3FEC93CC9262435 /* JLLocationInUsePermission.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E873CAA6150E4A755745A844E64BBA7 /* JLLocationInUsePermission.m */; };
 		9A37C317D8C74D76D766E5C1F8290732 /* JLHealthPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F81D4F03A204960F7E6D84AFDD015EE /* JLHealthPermission.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9B0E750533A1EA815CFEEFF297D9CCF1 /* WLBasePermission.m in Sources */ = {isa = PBXBuildFile; fileRef = A392F4D6AA715973A3C6A39907BEAC4C /* WLBasePermission.m */; };
 		9F3A9FF012F37F5444DBE32D9BAB4E2A /* JLReminderPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC4A13461BF6AD0388F81505E1B8103 /* JLReminderPermission.m */; };
 		A1626D82383DA124B0BCED902581804C /* JLAppleMusicPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = ECE32439C11DEFEE700E9AA36AB72A96 /* JLAppleMusicPermission.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A5D8CAAFC67BA939852ED37550D864DA /* JLCameraPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = 4592C63FD97D56EAD4F3B117816142F7 /* JLCameraPermission.m */; };
 		A7F5635BEE3A2863D74579744FA5A1FF /* JLHealthPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = 464A93ED2A235EEBE71150F91075EBF5 /* JLHealthPermission.m */; };
+		AB6BB4F49DEE8AB089C50F40F0048C44 /* WLBasePermission.h in Headers */ = {isa = PBXBuildFile; fileRef = 980D4A4AC6017322F46179CF10025487 /* WLBasePermission.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADEC7020C0BFFDF6CB215406B44E22E5 /* JLAuthorizationManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C17DD17B66DEA5F12A67C7FA6F0F66DB /* JLAuthorizationManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AF903C6BC2C2A50125C1B4E36AA97CAE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E1E3AA6994BEB9D6A0C21D70491BC1C /* AVFoundation.framework */; };
 		AFE203EA7F2CB3735BC79AF530FBA9B1 /* JLNotificationPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = 399CC8AF2FA5262427DF2B68AFE891A6 /* JLNotificationPermission.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B098EDF59A45717EB84EB24F93AB12E5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E11BBB4549BB5CC827A0A3B080F1F64D /* CoreGraphics.framework */; };
-		B5C92E43F3377B591FB9DE8D2C360BD9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C88E216BF15E894A96AE86A6B9D80458 /* Foundation.framework */; };
-		B5F100046A6546814D5DD9F0612D3B6A /* WLAuthorizationTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 288DC310F96D3CDF4115E9B44886E5BF /* WLAuthorizationTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C0A879FB58564C0332D11ADA11C505C8 /* JLMicrophonePermission.m in Sources */ = {isa = PBXBuildFile; fileRef = 47865B420FCB633222F3EAD4A690944F /* JLMicrophonePermission.m */; };
 		C3D7187557A9D13AC3A91B65B1CBF2F0 /* JLMicrophonePermission.h in Headers */ = {isa = PBXBuildFile; fileRef = B17DB464EDE7599319DF7DA5FB5D8132 /* JLMicrophonePermission.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C42A1B30F3038F40B1872D8DA7182D59 /* JLSpeechRecognizerPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CE78C79BBFA41CB788451F1CB255A00 /* JLSpeechRecognizerPermission.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C79A8F56F8A375E525E8BDE585586698 /* WLBasePermission.m in Sources */ = {isa = PBXBuildFile; fileRef = B19A59C10E97430AD4AF02B125916E55 /* WLBasePermission.m */; };
 		CB1F2F14374B6052CB1B3CD4DCF03D01 /* JLBasePermisssion.m in Sources */ = {isa = PBXBuildFile; fileRef = B948EB7674AA637AC08245A9F5103DCB /* JLBasePermisssion.m */; };
+		CD91FF5865B1A8B1C680C1D612FFD6D1 /* WLAuthorization-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BE1349DA779F46D0E9A63924CD2C4833 /* WLAuthorization-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CFCB441B53D037D74DEA243D5CE56F8C /* JLMotionPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B210D266A9C34591D9C83DC45E8CC91 /* JLMotionPermission.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D44C8C45730C96A59FBFC72D9E858242 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C88E216BF15E894A96AE86A6B9D80458 /* Foundation.framework */; };
 		D547F02310FFDC482C79E3B442BBCD93 /* JLAuthorizationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3848A39CEB8CE1753D5D9ACAE54B688B /* JLAuthorizationManager.m */; };
@@ -68,123 +72,123 @@
 		D9872B9D2E602BBC29E5B0FAE30432C2 /* Pods-WLAuthorization_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAA938094740AB15E5D023188A1BB28 /* Pods-WLAuthorization_Example-dummy.m */; };
 		DADA40E60C483BD06A5C0DEC964D9270 /* JLPhotosPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D34D2EACCF01459F656685BC0FA6EC /* JLPhotosPermission.m */; };
 		DBA64F669879682D9C26F00560DF4270 /* JLSiriPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = 96A91C9C42E0434E56A61E73299B8027 /* JLSiriPermission.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DECBB396E0B9FF5CBC26303104D6038B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D3DF2B91CCE7C444084D05F7757695 /* CoreLocation.framework */; };
-		E2A50E5E5591959B9F569FA4D8A6F9F9 /* MGAuthManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 632607485A88EA7FADDECA0E23FDC55A /* MGAuthManager.m */; };
-		ED9991B3614FF1B07DA6FFF72168F794 /* WLBasePermission.h in Headers */ = {isa = PBXBuildFile; fileRef = 701CF9451CACC1F37EC2BE8809691013 /* WLBasePermission.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E7A35D15D1D2CA1C9F8DA4B141D97B8B /* WLCameraPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DBC7D010762F334BA653141750DCBB /* WLCameraPermission.m */; };
 		EE8273C56AA944D9D5B8E114283321F3 /* JLBluetoothPeripheralPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = F79FDA37A65F6FA1B32DB3EBB42F6032 /* JLBluetoothPeripheralPermission.m */; };
 		F3C0A909598A6759698C426867BDE93A /* JLCellularNetWorkPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = A9366A948FA5AF3FA60F9072C3AF041B /* JLCellularNetWorkPermission.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F46CE1DC016F6A9DBC7D4CFF491745C4 /* JLCalendarPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F402CC058D872BF141D915EEDF3937 /* JLCalendarPermission.m */; };
-		FDB0E9DE730FAFEFB3D28A9FC0904A63 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58713D6CE83096227BBF4A63E4F3ECFD /* CoreTelephony.framework */; };
+		FF34DB328346799014FBE70BC79AE6E1 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6220467F0424E4AAD18FF4F4C1690108 /* AssetsLibrary.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		71D94E8943C09C0AEA084AD2D1D6A479 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D5F30F540311B3815E7ABD7ACFCAB680;
-			remoteInfo = JLAuthorizationManager;
-		};
-		D8B8639211D2FCA2290983304CA2F323 /* PBXContainerItemProxy */ = {
+		65346964104E497273C0F3857C1ED09D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 3AE2272211AE30CB1AFC03B13D49EB7B;
 			remoteInfo = WLAuthorization;
 		};
+		6AA1F8FD6F119544070DD15C8D4015AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D5F30F540311B3815E7ABD7ACFCAB680;
+			remoteInfo = JLAuthorizationManager;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		01B5D8936948358E832AA5EC5362E187 /* JLSpeechRecognizerPermission.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JLSpeechRecognizerPermission.m; path = JLAuthorizationManager/Classes/Permissions/JLSpeechRecognizerPermission.m; sourceTree = "<group>"; };
+		05F5C76C18A501907AAC5B6B5CB9E71D /* WLAuthorization-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WLAuthorization-prefix.pch"; sourceTree = "<group>"; };
 		06C433B9C48F01B2028D77CDC341E384 /* JLReminderPermission.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JLReminderPermission.h; path = JLAuthorizationManager/Classes/Permissions/JLReminderPermission.h; sourceTree = "<group>"; };
-		0D3B1217A5A71788627BCB593D6B6159 /* WLAuthorization-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WLAuthorization-dummy.m"; sourceTree = "<group>"; };
+		09CAF74060AC41048AA7FD54B5F78E92 /* WLAuthorization.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = WLAuthorization.modulemap; sourceTree = "<group>"; };
+		0DA60CB708FE8EED212C48FF5F1278A1 /* WLAuthorizationTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WLAuthorizationTypes.h; sourceTree = "<group>"; };
 		1176D5CE4BB99837904D2863E587079D /* JLLocationAlwaysPermission.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JLLocationAlwaysPermission.h; path = JLAuthorizationManager/Classes/Permissions/JLLocationAlwaysPermission.h; sourceTree = "<group>"; };
 		169BB61BE8C60968758F16180855A3E0 /* JLAuthorizationManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JLAuthorizationManager-dummy.m"; sourceTree = "<group>"; };
-		16EB380BAE27C62724B55BFBA34B93BC /* WLAuthorization.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = WLAuthorization.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		18F402CC058D872BF141D915EEDF3937 /* JLCalendarPermission.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JLCalendarPermission.m; path = JLAuthorizationManager/Classes/Permissions/JLCalendarPermission.m; sourceTree = "<group>"; };
+		19ECDDA7D8F78F3A2FD10204BE102A91 /* WLAuthorization-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WLAuthorization-dummy.m"; sourceTree = "<group>"; };
 		1B65C2BCD1C776ADE8307BA090CC2185 /* JLBluetoothPermission.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JLBluetoothPermission.m; path = JLAuthorizationManager/Classes/Permissions/JLBluetoothPermission.m; sourceTree = "<group>"; };
 		1C3ED2EAB4C095890D36544B45DAE92A /* JLCalendarPermission.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JLCalendarPermission.h; path = JLAuthorizationManager/Classes/Permissions/JLCalendarPermission.h; sourceTree = "<group>"; };
-		1FC885D08D4B1826C1058DE36784DC95 /* WLLocationPermission.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WLLocationPermission.h; sourceTree = "<group>"; };
-		20F5460CAD0CDBD5CD205DF8844D992A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		226A337AB85DF8AA1C403632D6978FCC /* WLAuthorization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WLAuthorization.h; path = WLAuthorization/Classes/WLAuthorization.h; sourceTree = "<group>"; };
 		22C9883C7E1498AB8E60F38BF65BD08E /* JLAuthorizationManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JLAuthorizationManager-prefix.pch"; sourceTree = "<group>"; };
 		27B402B3106BD93C4943012134CE2BB6 /* JLBluetoothPermission.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JLBluetoothPermission.h; path = JLAuthorizationManager/Classes/Permissions/JLBluetoothPermission.h; sourceTree = "<group>"; };
-		288DC310F96D3CDF4115E9B44886E5BF /* WLAuthorizationTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WLAuthorizationTypes.h; sourceTree = "<group>"; };
-		2C452626B1E50C687BFB7C6B81B1B9B3 /* WLAuthorization.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WLAuthorization.release.xcconfig; sourceTree = "<group>"; };
 		2D6E6F87D66F892E26C1422820644835 /* JLCellularNetWorkPermission.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JLCellularNetWorkPermission.m; path = JLAuthorizationManager/Classes/Permissions/JLCellularNetWorkPermission.m; sourceTree = "<group>"; };
 		306641E511C42C5A8CEE156124BFC032 /* JLAuthorizationManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JLAuthorizationManager.release.xcconfig; sourceTree = "<group>"; };
+		358A1B0810FFB057F48E731EE394F76A /* WLAuthorization.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WLAuthorization.debug.xcconfig; sourceTree = "<group>"; };
 		3848A39CEB8CE1753D5D9ACAE54B688B /* JLAuthorizationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JLAuthorizationManager.m; path = JLAuthorizationManager/Classes/AuthorizationManager/JLAuthorizationManager.m; sourceTree = "<group>"; };
 		399CC8AF2FA5262427DF2B68AFE891A6 /* JLNotificationPermission.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JLNotificationPermission.h; path = JLAuthorizationManager/Classes/Permissions/JLNotificationPermission.h; sourceTree = "<group>"; };
+		3A0CA9654E8130360BB4C0CB6C28F941 /* WLLocationPermission.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WLLocationPermission.m; sourceTree = "<group>"; };
 		3CAA938094740AB15E5D023188A1BB28 /* Pods-WLAuthorization_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WLAuthorization_Example-dummy.m"; sourceTree = "<group>"; };
 		4592C63FD97D56EAD4F3B117816142F7 /* JLCameraPermission.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JLCameraPermission.m; path = JLAuthorizationManager/Classes/Permissions/JLCameraPermission.m; sourceTree = "<group>"; };
 		464A93ED2A235EEBE71150F91075EBF5 /* JLHealthPermission.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JLHealthPermission.m; path = JLAuthorizationManager/Classes/Permissions/JLHealthPermission.m; sourceTree = "<group>"; };
 		47865B420FCB633222F3EAD4A690944F /* JLMicrophonePermission.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JLMicrophonePermission.m; path = JLAuthorizationManager/Classes/Permissions/JLMicrophonePermission.m; sourceTree = "<group>"; };
 		49D34D2EACCF01459F656685BC0FA6EC /* JLPhotosPermission.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JLPhotosPermission.m; path = JLAuthorizationManager/Classes/Permissions/JLPhotosPermission.m; sourceTree = "<group>"; };
 		4A4FC9247209E1E2822F8D95764C9F5D /* Pods-WLAuthorization_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WLAuthorization_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		4E4BFC96E852FEDC5CC954559528A8A7 /* MGAuthManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MGAuthManager.h; path = WLAuthorization/Classes/MGAuthManager.h; sourceTree = "<group>"; };
 		4EC4A13461BF6AD0388F81505E1B8103 /* JLReminderPermission.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JLReminderPermission.m; path = JLAuthorizationManager/Classes/Permissions/JLReminderPermission.m; sourceTree = "<group>"; };
-		51C61DBC13E30675728B62BABFB047CF /* WLAuthorization.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WLAuthorization.debug.xcconfig; sourceTree = "<group>"; };
 		5405A6A5C032D40A7142F8558D52FA80 /* JLContactPermission.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JLContactPermission.h; path = JLAuthorizationManager/Classes/Permissions/JLContactPermission.h; sourceTree = "<group>"; };
 		54A84C92CABB2407326F175D97FB2570 /* Pods-WLAuthorization_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WLAuthorization_Example.release.xcconfig"; sourceTree = "<group>"; };
-		568197ED5B91BCAA817475B83F722998 /* WLAuthorizationProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WLAuthorizationProtocol.h; sourceTree = "<group>"; };
 		58713D6CE83096227BBF4A63E4F3ECFD /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = DEVELOPER_DIR; };
-		61D69E7E9D372395104EDDFB47230E07 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		5D53E38EE11B5A502035A2456DF30460 /* WLAuthorizationResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WLAuthorizationResult.h; sourceTree = "<group>"; };
 		6220467F0424E4AAD18FF4F4C1690108 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/AssetsLibrary.framework; sourceTree = DEVELOPER_DIR; };
 		62F47AD07E7408B6BC3AD74F9640B11F /* Pods-WLAuthorization_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WLAuthorization_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		632607485A88EA7FADDECA0E23FDC55A /* MGAuthManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MGAuthManager.m; path = WLAuthorization/Classes/MGAuthManager.m; sourceTree = "<group>"; };
 		67C2F90115361AB5F3349421D0BB3948 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Contacts.framework; sourceTree = DEVELOPER_DIR; };
 		69D26FB7F974677D6F052C268789E5D8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		6AEC9A202D6D90FFDF1255A52780DDB4 /* JLLocationInUsePermission.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JLLocationInUsePermission.h; path = JLAuthorizationManager/Classes/Permissions/JLLocationInUsePermission.h; sourceTree = "<group>"; };
 		6AF8762CC7B8D3044E99E4681B131E5A /* JLAuthorizationManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JLAuthorizationManager.modulemap; sourceTree = "<group>"; };
 		6E873CAA6150E4A755745A844E64BBA7 /* JLLocationInUsePermission.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JLLocationInUsePermission.m; path = JLAuthorizationManager/Classes/Permissions/JLLocationInUsePermission.m; sourceTree = "<group>"; };
-		701CF9451CACC1F37EC2BE8809691013 /* WLBasePermission.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WLBasePermission.h; sourceTree = "<group>"; };
 		77CFBF36FCD1EE48B3B79A62A5D95921 /* JLLocationAlwaysPermission.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JLLocationAlwaysPermission.m; path = JLAuthorizationManager/Classes/Permissions/JLLocationAlwaysPermission.m; sourceTree = "<group>"; };
 		79918E3AB054212AE51A9A47763923EF /* Pods-WLAuthorization_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WLAuthorization_Example-Info.plist"; sourceTree = "<group>"; };
-		79A6A481C7B61F51620D7438BE478EC0 /* WLLocationPermission.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WLLocationPermission.m; sourceTree = "<group>"; };
-		79EFF12D78795C63076B64CF399765BE /* Pods_WLAuthorization_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_WLAuthorization_Example.framework; path = "Pods-WLAuthorization_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		79EFF12D78795C63076B64CF399765BE /* Pods_WLAuthorization_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WLAuthorization_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EB449D35872402DBDD954B626FED1F5 /* WLAuthorization.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WLAuthorization.release.xcconfig; sourceTree = "<group>"; };
 		800C769AFCD364E50940FDBCA640457C /* JLBluetoothPeripheralPermission.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JLBluetoothPeripheralPermission.h; path = JLAuthorizationManager/Classes/Permissions/JLBluetoothPeripheralPermission.h; sourceTree = "<group>"; };
 		80ACE9F7206A7E8D8E86E46421B419ED /* JLPhotosPermission.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JLPhotosPermission.h; path = JLAuthorizationManager/Classes/Permissions/JLPhotosPermission.h; sourceTree = "<group>"; };
 		86C81632DE11D7E12321BCF1ABD6FFC7 /* JLConstant.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JLConstant.h; path = JLAuthorizationManager/Classes/Base/JLConstant.h; sourceTree = "<group>"; };
 		88FDEB2BF8CF698DE7E65A098C3A2513 /* Pods-WLAuthorization_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WLAuthorization_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		89296FC852C0ED178E0C0CBC5D4134E4 /* JLSiriPermission.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JLSiriPermission.m; path = JLAuthorizationManager/Classes/Permissions/JLSiriPermission.m; sourceTree = "<group>"; };
 		8F81D4F03A204960F7E6D84AFDD015EE /* JLHealthPermission.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JLHealthPermission.h; path = JLAuthorizationManager/Classes/Permissions/JLHealthPermission.h; sourceTree = "<group>"; };
+		91506BEB491277E3989EB5FA622E4D53 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		96A91C9C42E0434E56A61E73299B8027 /* JLSiriPermission.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JLSiriPermission.h; path = JLAuthorizationManager/Classes/Permissions/JLSiriPermission.h; sourceTree = "<group>"; };
-		9A9E3FCC468F075C9FE6438E66E481E0 /* WLAuthorizationResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WLAuthorizationResult.h; sourceTree = "<group>"; };
+		980D4A4AC6017322F46179CF10025487 /* WLBasePermission.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WLBasePermission.h; sourceTree = "<group>"; };
 		9B210D266A9C34591D9C83DC45E8CC91 /* JLMotionPermission.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JLMotionPermission.h; path = JLAuthorizationManager/Classes/Permissions/JLMotionPermission.h; sourceTree = "<group>"; };
 		9CE78C79BBFA41CB788451F1CB255A00 /* JLSpeechRecognizerPermission.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JLSpeechRecognizerPermission.h; path = JLAuthorizationManager/Classes/Permissions/JLSpeechRecognizerPermission.h; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E1E3AA6994BEB9D6A0C21D70491BC1C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		9FE52557D51319B9AD35A56494E38C8F /* WLLocationPermission.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WLLocationPermission.h; sourceTree = "<group>"; };
+		A0A3E5B57F294916CF6D8A4D0DB782C7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		A0D82C5D1BA07FC9691C2E16BE4A0D45 /* JLAuthorizationManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JLAuthorizationManager.h; path = JLAuthorizationManager/Classes/AuthorizationManager/JLAuthorizationManager.h; sourceTree = "<group>"; };
-		A392F4D6AA715973A3C6A39907BEAC4C /* WLBasePermission.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WLBasePermission.m; sourceTree = "<group>"; };
 		A6A8F0D21EA8A63E682984DE36C445FC /* Pods-WLAuthorization_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WLAuthorization_Example-frameworks.sh"; sourceTree = "<group>"; };
 		A9366A948FA5AF3FA60F9072C3AF041B /* JLCellularNetWorkPermission.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JLCellularNetWorkPermission.h; path = JLAuthorizationManager/Classes/Permissions/JLCellularNetWorkPermission.h; sourceTree = "<group>"; };
+		AAADFFCCE201B56A7D3A424E65EC1036 /* MGAuthManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MGAuthManager.m; path = WLAuthorization/Classes/MGAuthManager.m; sourceTree = "<group>"; };
+		AC5E4F8F9C74089071594924D1253143 /* WLAuthorizationResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WLAuthorizationResult.m; sourceTree = "<group>"; };
 		B17DB464EDE7599319DF7DA5FB5D8132 /* JLMicrophonePermission.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JLMicrophonePermission.h; path = JLAuthorizationManager/Classes/Permissions/JLMicrophonePermission.h; sourceTree = "<group>"; };
-		B2A5AF8044DDD8B42B9FE37F4FA3299A /* WLAuthorization-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WLAuthorization-prefix.pch"; sourceTree = "<group>"; };
+		B19A59C10E97430AD4AF02B125916E55 /* WLBasePermission.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WLBasePermission.m; sourceTree = "<group>"; };
 		B3BA4E16412DDAD4DC4376AA97361FF7 /* JLNotificationPermission.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JLNotificationPermission.m; path = JLAuthorizationManager/Classes/Permissions/JLNotificationPermission.m; sourceTree = "<group>"; };
 		B41FE8E54AD912444FFF22FA542EAA8B /* Pods-WLAuthorization_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WLAuthorization_Example-umbrella.h"; sourceTree = "<group>"; };
+		B446A53AEEE8AEA929407CA95CFABB4C /* WLCameraPermission.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WLCameraPermission.h; sourceTree = "<group>"; };
+		B673DDF8B32EC24FDAFC94ED42C50674 /* WLAuthorization-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "WLAuthorization-Info.plist"; sourceTree = "<group>"; };
+		B6BB9B0884631D823D948BBC8F136FAD /* WLAuthorization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WLAuthorization.h; path = WLAuthorization/Classes/WLAuthorization.h; sourceTree = "<group>"; };
 		B8832FD2F5346876B365CF294D3181DF /* JLAuthorizationProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JLAuthorizationProtocol.h; path = JLAuthorizationManager/Classes/Base/JLAuthorizationProtocol.h; sourceTree = "<group>"; };
 		B8B29E58AD8CA3B026926D62449941FF /* JLCameraPermission.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JLCameraPermission.h; path = JLAuthorizationManager/Classes/Permissions/JLCameraPermission.h; sourceTree = "<group>"; };
 		B948EB7674AA637AC08245A9F5103DCB /* JLBasePermisssion.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JLBasePermisssion.m; path = JLAuthorizationManager/Classes/Base/JLBasePermisssion.m; sourceTree = "<group>"; };
 		BA7E73619F685642AAE3EBACB332C97E /* JLBasePermisssion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JLBasePermisssion.h; path = JLAuthorizationManager/Classes/Base/JLBasePermisssion.h; sourceTree = "<group>"; };
 		BD1F84FD87C8EAD38576742704ECF2A1 /* Pods-WLAuthorization_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WLAuthorization_Example.modulemap"; sourceTree = "<group>"; };
+		BE1349DA779F46D0E9A63924CD2C4833 /* WLAuthorization-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WLAuthorization-umbrella.h"; sourceTree = "<group>"; };
 		C17DD17B66DEA5F12A67C7FA6F0F66DB /* JLAuthorizationManager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JLAuthorizationManager-umbrella.h"; sourceTree = "<group>"; };
-		C6A02DD69C469AF123302E2CA1A62252 /* WLAuthorization.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = WLAuthorization.modulemap; sourceTree = "<group>"; };
+		C5DBC7D010762F334BA653141750DCBB /* WLCameraPermission.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WLCameraPermission.m; sourceTree = "<group>"; };
 		C76E511094EA34133D7CA04BBA21C737 /* JLAppleMusicPermission.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JLAppleMusicPermission.m; path = JLAuthorizationManager/Classes/Permissions/JLAppleMusicPermission.m; sourceTree = "<group>"; };
 		C864E92938901F3A1B99129B3E6E3B50 /* JLContactPermission.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JLContactPermission.m; path = JLAuthorizationManager/Classes/Permissions/JLContactPermission.m; sourceTree = "<group>"; };
 		C8775974D444B18A42584968FA66D6E0 /* JLAuthorizationManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JLAuthorizationManager.debug.xcconfig; sourceTree = "<group>"; };
 		C88E216BF15E894A96AE86A6B9D80458 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		C91BA68C1B1F0FCBAED8E1078C7523BD /* WLAuthorization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WLAuthorization.framework; path = WLAuthorization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C91BA68C1B1F0FCBAED8E1078C7523BD /* WLAuthorization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WLAuthorization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE8BF216041980822A0DA717AE51A74A /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Photos.framework; sourceTree = DEVELOPER_DIR; };
-		D02886CE9962735EE6EF5439B38D087B /* WLAuthorization-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "WLAuthorization-Info.plist"; sourceTree = "<group>"; };
-		D8363F9F709272167D57689CF83D1B78 /* JLAuthorizationManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JLAuthorizationManager.framework; path = JLAuthorizationManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8363F9F709272167D57689CF83D1B78 /* JLAuthorizationManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JLAuthorizationManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E11BBB4549BB5CC827A0A3B080F1F64D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		E973054F65B0628C2F422272BAD2A415 /* WLAuthorization-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WLAuthorization-umbrella.h"; sourceTree = "<group>"; };
+		E3146BA2BD8D32B45724FEA3F287E39A /* WLAuthorizationProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WLAuthorizationProtocol.h; sourceTree = "<group>"; };
+		E7540A6659100BDE5C79FA95CE4E0440 /* WLAuthorization.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = WLAuthorization.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		EAF8F01D3D0CE9752F692DEF4B258D90 /* JLAuthorizationManager-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JLAuthorizationManager-Info.plist"; sourceTree = "<group>"; };
 		ECC8479527E36D89A6494F7A5501AB30 /* JLMotionPermission.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JLMotionPermission.m; path = JLAuthorizationManager/Classes/Permissions/JLMotionPermission.m; sourceTree = "<group>"; };
 		ECE32439C11DEFEE700E9AA36AB72A96 /* JLAppleMusicPermission.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JLAppleMusicPermission.h; path = JLAuthorizationManager/Classes/Permissions/JLAppleMusicPermission.h; sourceTree = "<group>"; };
-		ED573599B33AF54D4F4212F9D4A0F629 /* MGAuthManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MGAuthManager.h; path = WLAuthorization/Classes/MGAuthManager.h; sourceTree = "<group>"; };
 		F2D3DF2B91CCE7C444084D05F7757695 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
 		F79FDA37A65F6FA1B32DB3EBB42F6032 /* JLBluetoothPeripheralPermission.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JLBluetoothPeripheralPermission.m; path = JLAuthorizationManager/Classes/Permissions/JLBluetoothPeripheralPermission.m; sourceTree = "<group>"; };
-		FDAC598A2A16FCAB4508E2A8652CBF1C /* WLAuthorizationResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WLAuthorizationResult.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,27 +200,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		82A0D07FD9624C0DC99353047F091DCC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF34DB328346799014FBE70BC79AE6E1 /* AssetsLibrary.framework in Frameworks */,
+				43570B8BB72C8850ADD870CB41D596AF /* AVFoundation.framework in Frameworks */,
+				4B9802F0C6BA921BE579814C6995C0BC /* Contacts.framework in Frameworks */,
+				8B2A02700F36528C0EA3B5619E098D23 /* CoreGraphics.framework in Frameworks */,
+				41F8CA90D01BB807C9F342AE1E39FAF0 /* CoreLocation.framework in Frameworks */,
+				1B9546243824B3FC495D8EFC511D7486 /* CoreTelephony.framework in Frameworks */,
+				879BF36C88F30C63CD3F6FCCBB385FB2 /* Foundation.framework in Frameworks */,
+				899D8EA4FD95BCAF87C7B9ED1E8A1E45 /* Photos.framework in Frameworks */,
+				22F74FE175D657D81DA095D17AB85D80 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9B8F47FD7224650457164176384F1F81 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D44C8C45730C96A59FBFC72D9E858242 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F17E8D3617B6A072B2C49F4AB75DE847 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				665668EF6DB8547F02AF38FB429CF30C /* AssetsLibrary.framework in Frameworks */,
-				AF903C6BC2C2A50125C1B4E36AA97CAE /* AVFoundation.framework in Frameworks */,
-				7EBF7090BFFC5D235CAD40B73B556D43 /* Contacts.framework in Frameworks */,
-				B098EDF59A45717EB84EB24F93AB12E5 /* CoreGraphics.framework in Frameworks */,
-				DECBB396E0B9FF5CBC26303104D6038B /* CoreLocation.framework in Frameworks */,
-				FDB0E9DE730FAFEFB3D28A9FC0904A63 /* CoreTelephony.framework in Frameworks */,
-				B5C92E43F3377B591FB9DE8D2C360BD9 /* Foundation.framework in Frameworks */,
-				2D90D51C5D5D62418092B0D6E6864DF3 /* Photos.framework in Frameworks */,
-				613F34AD92660E8EA5141D7792720930 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,26 +250,35 @@
 			path = "../Target Support Files/JLAuthorizationManager";
 			sourceTree = "<group>";
 		};
+		15DC0F2AE33F182F754685FE190BF517 /* WLAuthorization */ = {
+			isa = PBXGroup;
+			children = (
+				4E4BFC96E852FEDC5CC954559528A8A7 /* MGAuthManager.h */,
+				AAADFFCCE201B56A7D3A424E65EC1036 /* MGAuthManager.m */,
+				B6BB9B0884631D823D948BBC8F136FAD /* WLAuthorization.h */,
+				F17C22592FD230FA3D76B3DF97E43E58 /* Base */,
+				BB4C7BD5431B0427FAB2A34C45C9ADAE /* Camera */,
+				4E3F4A4CF55017164BF968D3CBA8FB30 /* Location */,
+				43A696419F01F3DB4778831DB22310BC /* Pod */,
+				7F4A68341E67C7B331B9DDD6E93ACBFB /* Support Files */,
+			);
+			name = WLAuthorization;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		189425DA93FB60C85B23B04C62007D23 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				15DC0F2AE33F182F754685FE190BF517 /* WLAuthorization */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
 		1D1DB2CE23AC1A241F109C2DD6E102FF /* All */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = All;
-			sourceTree = "<group>";
-		};
-		2B282A6FD987A514B6426EDC0A08C322 /* WLAuthorization */ = {
-			isa = PBXGroup;
-			children = (
-				ED573599B33AF54D4F4212F9D4A0F629 /* MGAuthManager.h */,
-				632607485A88EA7FADDECA0E23FDC55A /* MGAuthManager.m */,
-				226A337AB85DF8AA1C403632D6978FCC /* WLAuthorization.h */,
-				349162B78E4CD84C72DF4DD9A58CB598 /* Base */,
-				CCB72FCB7D80891B998D1D60ACB287A2 /* Location */,
-				AD183EFEBFB3C04579AB78E4CB1F9191 /* Pod */,
-				964653A28233E7ACD46DBF91855E260E /* Support Files */,
-			);
-			name = WLAuthorization;
-			path = ../..;
 			sourceTree = "<group>";
 		};
 		2CD1E47A572086FDC4B33EAAD0A4434E /* JLAuthorizationManager */ = {
@@ -314,22 +327,7 @@
 				1D1DB2CE23AC1A241F109C2DD6E102FF /* All */,
 				10442EDEC4493AFA0DE15141F43B083D /* Support Files */,
 			);
-			name = JLAuthorizationManager;
 			path = JLAuthorizationManager;
-			sourceTree = "<group>";
-		};
-		349162B78E4CD84C72DF4DD9A58CB598 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				568197ED5B91BCAA817475B83F722998 /* WLAuthorizationProtocol.h */,
-				9A9E3FCC468F075C9FE6438E66E481E0 /* WLAuthorizationResult.h */,
-				FDAC598A2A16FCAB4508E2A8652CBF1C /* WLAuthorizationResult.m */,
-				288DC310F96D3CDF4115E9B44886E5BF /* WLAuthorizationTypes.h */,
-				701CF9451CACC1F37EC2BE8809691013 /* WLBasePermission.h */,
-				A392F4D6AA715973A3C6A39907BEAC4C /* WLBasePermission.m */,
-			);
-			name = Base;
-			path = WLAuthorization/Classes/Base;
 			sourceTree = "<group>";
 		};
 		3ACB3CB74596A080A9F56A2212EB315F /* Targets Support Files */ = {
@@ -340,24 +338,36 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		65723EB3570D2C80F42AB41C3A6FF075 /* Development Pods */ = {
+		43A696419F01F3DB4778831DB22310BC /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				2B282A6FD987A514B6426EDC0A08C322 /* WLAuthorization */,
+				A0A3E5B57F294916CF6D8A4D0DB782C7 /* LICENSE */,
+				91506BEB491277E3989EB5FA622E4D53 /* README.md */,
+				E7540A6659100BDE5C79FA95CE4E0440 /* WLAuthorization.podspec */,
 			);
-			name = "Development Pods";
+			name = Pod;
 			sourceTree = "<group>";
 		};
-		964653A28233E7ACD46DBF91855E260E /* Support Files */ = {
+		4E3F4A4CF55017164BF968D3CBA8FB30 /* Location */ = {
 			isa = PBXGroup;
 			children = (
-				C6A02DD69C469AF123302E2CA1A62252 /* WLAuthorization.modulemap */,
-				0D3B1217A5A71788627BCB593D6B6159 /* WLAuthorization-dummy.m */,
-				D02886CE9962735EE6EF5439B38D087B /* WLAuthorization-Info.plist */,
-				B2A5AF8044DDD8B42B9FE37F4FA3299A /* WLAuthorization-prefix.pch */,
-				E973054F65B0628C2F422272BAD2A415 /* WLAuthorization-umbrella.h */,
-				51C61DBC13E30675728B62BABFB047CF /* WLAuthorization.debug.xcconfig */,
-				2C452626B1E50C687BFB7C6B81B1B9B3 /* WLAuthorization.release.xcconfig */,
+				9FE52557D51319B9AD35A56494E38C8F /* WLLocationPermission.h */,
+				3A0CA9654E8130360BB4C0CB6C28F941 /* WLLocationPermission.m */,
+			);
+			name = Location;
+			path = WLAuthorization/Classes/Location;
+			sourceTree = "<group>";
+		};
+		7F4A68341E67C7B331B9DDD6E93ACBFB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				09CAF74060AC41048AA7FD54B5F78E92 /* WLAuthorization.modulemap */,
+				19ECDDA7D8F78F3A2FD10204BE102A91 /* WLAuthorization-dummy.m */,
+				B673DDF8B32EC24FDAFC94ED42C50674 /* WLAuthorization-Info.plist */,
+				05F5C76C18A501907AAC5B6B5CB9E71D /* WLAuthorization-prefix.pch */,
+				BE1349DA779F46D0E9A63924CD2C4833 /* WLAuthorization-umbrella.h */,
+				358A1B0810FFB057F48E731EE394F76A /* WLAuthorization.debug.xcconfig */,
+				7EB449D35872402DBDD954B626FED1F5 /* WLAuthorization.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/WLAuthorization";
@@ -371,31 +381,21 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		AD183EFEBFB3C04579AB78E4CB1F9191 /* Pod */ = {
+		BB4C7BD5431B0427FAB2A34C45C9ADAE /* Camera */ = {
 			isa = PBXGroup;
 			children = (
-				61D69E7E9D372395104EDDFB47230E07 /* LICENSE */,
-				20F5460CAD0CDBD5CD205DF8844D992A /* README.md */,
-				16EB380BAE27C62724B55BFBA34B93BC /* WLAuthorization.podspec */,
+				B446A53AEEE8AEA929407CA95CFABB4C /* WLCameraPermission.h */,
+				C5DBC7D010762F334BA653141750DCBB /* WLCameraPermission.m */,
 			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		CCB72FCB7D80891B998D1D60ACB287A2 /* Location */ = {
-			isa = PBXGroup;
-			children = (
-				1FC885D08D4B1826C1058DE36784DC95 /* WLLocationPermission.h */,
-				79A6A481C7B61F51620D7438BE478EC0 /* WLLocationPermission.m */,
-			);
-			name = Location;
-			path = WLAuthorization/Classes/Location;
+			name = Camera;
+			path = WLAuthorization/Classes/Camera;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				65723EB3570D2C80F42AB41C3A6FF075 /* Development Pods */,
+				189425DA93FB60C85B23B04C62007D23 /* Development Pods */,
 				0656CE04288357F0748AB498835BA03E /* Frameworks */,
 				978F571FA412948500E62664B3E3F210 /* Pods */,
 				FE5D614F20E3A75DB31D6B5AE3F03102 /* Products */,
@@ -418,6 +418,20 @@
 			);
 			name = "Pods-WLAuthorization_Example";
 			path = "Target Support Files/Pods-WLAuthorization_Example";
+			sourceTree = "<group>";
+		};
+		F17C22592FD230FA3D76B3DF97E43E58 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				E3146BA2BD8D32B45724FEA3F287E39A /* WLAuthorizationProtocol.h */,
+				5D53E38EE11B5A502035A2456DF30460 /* WLAuthorizationResult.h */,
+				AC5E4F8F9C74089071594924D1253143 /* WLAuthorizationResult.m */,
+				0DA60CB708FE8EED212C48FF5F1278A1 /* WLAuthorizationTypes.h */,
+				980D4A4AC6017322F46179CF10025487 /* WLBasePermission.h */,
+				B19A59C10E97430AD4AF02B125916E55 /* WLBasePermission.m */,
+			);
+			name = Base;
+			path = WLAuthorization/Classes/Base;
 			sourceTree = "<group>";
 		};
 		F88CFA471B1CA5820FCB157D38B8EECF /* iOS */ = {
@@ -449,18 +463,19 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		2DA80158A78ED56B91052C39817052CE /* Headers */ = {
+		1D9A2B59AEAD7C2E340B8AD1B103DA7F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63DE66CEC04E85D9574C033EDCCCB2BE /* MGAuthManager.h in Headers */,
-				66CC4C9AE9B0A229440C1F9D16FA87B0 /* WLAuthorization-umbrella.h in Headers */,
-				5A8964F9380C537B9E827F14F11A812D /* WLAuthorization.h in Headers */,
-				73C6846C77FA7476D9DF5C9DBD653FC4 /* WLAuthorizationProtocol.h in Headers */,
-				7EC4724FD7D82167FA662C50C3CBA39D /* WLAuthorizationResult.h in Headers */,
-				B5F100046A6546814D5DD9F0612D3B6A /* WLAuthorizationTypes.h in Headers */,
-				ED9991B3614FF1B07DA6FFF72168F794 /* WLBasePermission.h in Headers */,
-				1E835FA93016CE0D14F9701593BCECE3 /* WLLocationPermission.h in Headers */,
+				6CB2408956F3AFD562FEAD7F1D172EE6 /* MGAuthManager.h in Headers */,
+				CD91FF5865B1A8B1C680C1D612FFD6D1 /* WLAuthorization-umbrella.h in Headers */,
+				0A0FFAE39F6EEA6960FEF7F87CB5E9B5 /* WLAuthorization.h in Headers */,
+				5FDF5BD92CB259254D6D796E0E1299E5 /* WLAuthorizationProtocol.h in Headers */,
+				88850349B543576F11FC39255731999A /* WLAuthorizationResult.h in Headers */,
+				455DCC1DC0DFC2C141671368C04A4D60 /* WLAuthorizationTypes.h in Headers */,
+				AB6BB4F49DEE8AB089C50F40F0048C44 /* WLBasePermission.h in Headers */,
+				2A554660287ED51CC16C757D955BF92F /* WLCameraPermission.h in Headers */,
+				25012C10B45BCA217920243A87F8A0DB /* WLLocationPermission.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,8 +531,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				923EEAC3A07E0BFFD6D6F9E75844BCBA /* PBXTargetDependency */,
-				0E15DBD8E0F6441E47DF64E7FAA86BAC /* PBXTargetDependency */,
+				D9B3B0CCCFAC72BB44B19B2ACA5FF176 /* PBXTargetDependency */,
+				593177B47A7FB23DDDEE1A4B12E36EB1 /* PBXTargetDependency */,
 			);
 			name = "Pods-WLAuthorization_Example";
 			productName = "Pods-WLAuthorization_Example";
@@ -526,12 +541,12 @@
 		};
 		3AE2272211AE30CB1AFC03B13D49EB7B /* WLAuthorization */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EDB4AB274B51EB5A4B78B512258AB7F1 /* Build configuration list for PBXNativeTarget "WLAuthorization" */;
+			buildConfigurationList = A63086A50E9254236CFD7843B269A4BC /* Build configuration list for PBXNativeTarget "WLAuthorization" */;
 			buildPhases = (
-				2DA80158A78ED56B91052C39817052CE /* Headers */,
-				76A3F9B861AA1B9B60349F6471212227 /* Sources */,
-				F17E8D3617B6A072B2C49F4AB75DE847 /* Frameworks */,
-				5B4DEB164FDB215304074CE60CE65E7D /* Resources */,
+				1D9A2B59AEAD7C2E340B8AD1B103DA7F /* Headers */,
+				6130BE838631FBFA7BEFBD859ACD70F2 /* Sources */,
+				82A0D07FD9624C0DC99353047F091DCC /* Frameworks */,
+				31A547E290B33F6C848715463C850E24 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -590,7 +605,7 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		5B4DEB164FDB215304074CE60CE65E7D /* Resources */ = {
+		31A547E290B33F6C848715463C850E24 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -641,15 +656,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		76A3F9B861AA1B9B60349F6471212227 /* Sources */ = {
+		6130BE838631FBFA7BEFBD859ACD70F2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2A50E5E5591959B9F569FA4D8A6F9F9 /* MGAuthManager.m in Sources */,
-				2DF74E6CBAA8E6A064D8805D366BA886 /* WLAuthorization-dummy.m in Sources */,
-				8DD4C93373F51261C587387FCC8E6127 /* WLAuthorizationResult.m in Sources */,
-				9B0E750533A1EA815CFEEFF297D9CCF1 /* WLBasePermission.m in Sources */,
-				38DBD5BEF94A347D354F559AEF2908B0 /* WLLocationPermission.m in Sources */,
+				19EF5BB5169D06C6DA1E5BBD7AD404A9 /* MGAuthManager.m in Sources */,
+				68BDD4EFF922F7BAD7F545995DBE405E /* WLAuthorization-dummy.m in Sources */,
+				62520172A932BEF55E2BB9D894B44265 /* WLAuthorizationResult.m in Sources */,
+				C79A8F56F8A375E525E8BDE585586698 /* WLBasePermission.m in Sources */,
+				E7A35D15D1D2CA1C9F8DA4B141D97B8B /* WLCameraPermission.m in Sources */,
+				3A307C0D7B73E3CF0161138648102CEE /* WLLocationPermission.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -664,17 +680,17 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0E15DBD8E0F6441E47DF64E7FAA86BAC /* PBXTargetDependency */ = {
+		593177B47A7FB23DDDEE1A4B12E36EB1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = WLAuthorization;
 			target = 3AE2272211AE30CB1AFC03B13D49EB7B /* WLAuthorization */;
-			targetProxy = D8B8639211D2FCA2290983304CA2F323 /* PBXContainerItemProxy */;
+			targetProxy = 65346964104E497273C0F3857C1ED09D /* PBXContainerItemProxy */;
 		};
-		923EEAC3A07E0BFFD6D6F9E75844BCBA /* PBXTargetDependency */ = {
+		D9B3B0CCCFAC72BB44B19B2ACA5FF176 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = JLAuthorizationManager;
 			target = D5F30F540311B3815E7ABD7ACFCAB680 /* JLAuthorizationManager */;
-			targetProxy = 71D94E8943C09C0AEA084AD2D1D6A479 /* PBXContainerItemProxy */;
+			targetProxy = 6AA1F8FD6F119544070DD15C8D4015AB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -683,6 +699,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C8775974D444B18A42584968FA66D6E0 /* JLAuthorizationManager.debug.xcconfig */;
 			buildSettings = {
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -697,6 +714,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/JLAuthorizationManager/JLAuthorizationManager.modulemap";
+				OTHER_CFLAGS = (
+					"-Xclang",
+					"-fcompatibility-qualified-id-block-type-checking",
+				);
 				PRODUCT_MODULE_NAME = JLAuthorizationManager;
 				PRODUCT_NAME = JLAuthorizationManager;
 				SDKROOT = iphoneos;
@@ -706,36 +727,7 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		045CC14ABC00383C9851AA59E67E540F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 51C61DBC13E30675728B62BABFB047CF /* WLAuthorization.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/WLAuthorization/WLAuthorization-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/WLAuthorization/WLAuthorization-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/WLAuthorization/WLAuthorization.modulemap";
-				PRODUCT_MODULE_NAME = WLAuthorization;
-				PRODUCT_NAME = WLAuthorization;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				WARNING_CFLAGS = "";
 			};
 			name = Debug;
 		};
@@ -838,9 +830,9 @@
 			};
 			name = Release;
 		};
-		51CFCA796F33F36D80CA23473A91CD43 /* Release */ = {
+		4D2C381985C23D8B1667EB1F49A0334B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2C452626B1E50C687BFB7C6B81B1B9B3 /* WLAuthorization.release.xcconfig */;
+			baseConfigurationReference = 7EB449D35872402DBDD954B626FED1F5 /* WLAuthorization.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -868,6 +860,36 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		8DF45831A17F41EBFA8327167FE78CD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 358A1B0810FFB057F48E731EE394F76A /* WLAuthorization.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/WLAuthorization/WLAuthorization-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/WLAuthorization/WLAuthorization-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/WLAuthorization/WLAuthorization.modulemap";
+				PRODUCT_MODULE_NAME = WLAuthorization;
+				PRODUCT_NAME = WLAuthorization;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -924,8 +946,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -967,6 +988,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 306641E511C42C5A8CEE156124BFC032 /* JLAuthorizationManager.release.xcconfig */;
 			buildSettings = {
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -981,6 +1003,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/JLAuthorizationManager/JLAuthorizationManager.modulemap";
+				OTHER_CFLAGS = (
+					"-Xclang",
+					"-fcompatibility-qualified-id-block-type-checking",
+				);
 				PRODUCT_MODULE_NAME = JLAuthorizationManager;
 				PRODUCT_NAME = JLAuthorizationManager;
 				SDKROOT = iphoneos;
@@ -991,6 +1017,7 @@
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+				WARNING_CFLAGS = "";
 			};
 			name = Release;
 		};
@@ -1024,11 +1051,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EDB4AB274B51EB5A4B78B512258AB7F1 /* Build configuration list for PBXNativeTarget "WLAuthorization" */ = {
+		A63086A50E9254236CFD7843B269A4BC /* Build configuration list for PBXNativeTarget "WLAuthorization" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				045CC14ABC00383C9851AA59E67E540F /* Debug */,
-				51CFCA796F33F36D80CA23473A91CD43 /* Release */,
+				8DF45831A17F41EBFA8327167FE78CD7 /* Debug */,
+				4D2C381985C23D8B1667EB1F49A0334B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

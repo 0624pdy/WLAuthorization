@@ -8,23 +8,21 @@
 
 #import "WLBasePermission.h"
 
-@class WLLocationConfig;
 
-@interface WLLocationPermission : WLBasePermission
 
-@property (nonatomic,strong) WLLocationConfig *config;
+@interface WLLocationConfig : WLAuthBaseConfig
+
+/**
+ *  请求类型，详见枚举：WLAuthRequestType
+ */
+@property (nonatomic,assign) WLAuthRequestType requestType;
 
 @end
 
 
 
+@interface WLLocationPermission : WLBasePermission
 
-
-@interface WLLocationConfig : NSObject
-
-@property (nonatomic,assign) NSInteger requestType;
-@property (nonatomic,assign) BOOL openSettingsIfNeeded;
-
-@property (nonatomic,readonly,class) WLLocationConfig *defaultConfig;
+- (BOOL)requestAuthorization:(WLAuthResultBlock)completion withConfig:(void(^)(WLLocationConfig *config))config;
 
 @end

@@ -2,86 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSVideoSubscriberAccountUsageDescription</key>
-	<string>TV provider</string>
-	<key>NSUserTrackingUsageDescription</key>
-	<string>tracking</string>
-	<key>NSSystemExtensionUsageDescription</key>
-	<string>system extension</string>
-	<key>NSSystemAdministrationUsageDescription</key>
-	<string>system administration</string>
-	<key>NSSpeechRecognitionUsageDescription</key>
-	<string>speech recognition</string>
-	<key>NSSiriUsageDescription</key>
-	<string>siri</string>
-	<key>NSRemovableVolumesUsageDescription</key>
-	<string>removable volumes</string>
-	<key>NSRemindersUsageDescription</key>
-	<string>reminders</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>photo library</string>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>photo library additions</string>
-	<key>NFCReaderUsageDescription</key>
-	<string>NFC scan</string>
-	<key>NSNetworkVolumesUsageDescription</key>
-	<string>network volumes</string>
-	<key>kTCCServiceMediaLibrary</key>
-	<string>music</string>
-	<key>NSMotionUsageDescription</key>
-	<string>motion</string>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>microphone</string>
-	<key>NSAppleMusicUsageDescription</key>
-	<string>media library</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>location when in use</string>
-	<key>NSLocationUsageDescription</key>
-	<string>location</string>
-	<key>NSLocationTemporaryUsageDescriptionDictionary</key>
-	<dict/>
-	<key>NSLocationDefaultAccuracyReduced</key>
-	<string>location default accuracy reduced</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>location always</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>location always an when in use</string>
-	<key>NSLocalNetworkUsageDescription</key>
-	<string>local network</string>
-	<key>NSHomeKitUsageDescription</key>
-	<string>home kit</string>
-	<key>NSHealthUpdateUsageDescription</key>
-	<string>health update</string>
-	<key>NSHealthShareUsageDescription</key>
-	<string>health share</string>
-	<key>NSHealthClinicalHealthRecordsShareUsageDescription</key>
-	<string>health record</string>
-	<key>NSFileProviderPresenceUsageDescription</key>
-	<string>file provider presense</string>
-	<key>NSFaceIDUsageDescription</key>
-	<string>face ID</string>
-	<key>OSBundleUsageDescription</key>
-	<string>driver extension</string>
-	<key>NSDownloadsFolderUsageDescription</key>
-	<string>download folder</string>
-	<key>NSDocumentsFolderUsageDescription</key>
-	<string>document folder</string>
-	<key>NSDesktopFolderUsageDescription</key>
-	<string>desktop folder</string>
-	<key>NSContactsUsageDescription</key>
-	<string>contact</string>
-	<key>NSCameraUsageDescription</key>
-	<string>camera</string>
-	<key>NSCalendarsUsageDescription</key>
-	<string>calendar</string>
-	<key>NSBluetoothPeripheralUsageDescription</key>
-	<string>bluetooth</string>
-	<key>NSBluetoothAlwaysUsageDescription</key>
-	<string>bluetooth</string>
-	<key>NSAppleEventsUsageDescription</key>
-	<string>apple event</string>
-	<key>NSFileProviderDomainUsageDescription</key>
-	<string>file provide domain</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
@@ -100,10 +20,104 @@
 	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>appSettings</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.pdy.WLAuthorization</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NFCReaderUsageDescription</key>
+	<string>NFC scan</string>
+	<key>NSAppleEventsUsageDescription</key>
+	<string>apple event</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>media library</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>bluetooth</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>bluetooth</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>calendar</string>
+	<key>NSCameraUsageDescription</key>
+	<string>camera</string>
+	<key>NSContactsUsageDescription</key>
+	<string>contact</string>
+	<key>NSDesktopFolderUsageDescription</key>
+	<string>desktop folder</string>
+	<key>NSDocumentsFolderUsageDescription</key>
+	<string>document folder</string>
+	<key>NSDownloadsFolderUsageDescription</key>
+	<string>download folder</string>
+	<key>NSFaceIDUsageDescription</key>
+	<string>face ID</string>
+	<key>NSFileProviderDomainUsageDescription</key>
+	<string>file provide domain</string>
+	<key>NSFileProviderPresenceUsageDescription</key>
+	<string>file provider presense</string>
+	<key>NSHealthClinicalHealthRecordsShareUsageDescription</key>
+	<string>health record</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>health share</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>health update</string>
+	<key>NSHomeKitUsageDescription</key>
+	<string>home kit</string>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>local network</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>location always an when in use</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>location always</string>
+	<key>NSLocationDefaultAccuracyReduced</key>
+	<string>location default accuracy reduced</string>
+	<key>NSLocationTemporaryUsageDescriptionDictionary</key>
+	<dict>
+		<key>aaa</key>
+		<string>aaa</string>
+	</dict>
+	<key>NSLocationUsageDescription</key>
+	<string>location</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>location when in use</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>microphone</string>
+	<key>NSMotionUsageDescription</key>
+	<string>motion</string>
+	<key>NSNetworkVolumesUsageDescription</key>
+	<string>network volumes</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>photo library additions</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>photo library</string>
+	<key>NSRemindersUsageDescription</key>
+	<string>reminders</string>
+	<key>NSRemovableVolumesUsageDescription</key>
+	<string>removable volumes</string>
+	<key>NSSiriUsageDescription</key>
+	<string>siri</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>speech recognition</string>
+	<key>NSSystemAdministrationUsageDescription</key>
+	<string>system administration</string>
+	<key>NSSystemExtensionUsageDescription</key>
+	<string>system extension</string>
+	<key>NSUserTrackingUsageDescription</key>
+	<string>tracking</string>
+	<key>NSVideoSubscriberAccountUsageDescription</key>
+	<string>TV provider</string>
+	<key>OSBundleUsageDescription</key>
+	<string>driver extension</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -125,5 +139,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>kTCCServiceMediaLibrary</key>
+	<string>music</string>
 </dict>
 </plist>

@@ -20,16 +20,23 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    //NSLog(@"%@", [[NSBundle mainBundle] infoDictionary]);
+    NSLog(@"%@", [[NSBundle mainBundle] infoDictionary]);
     
-    WLLocationConfig *config = [WLLocationConfig defaultConfig];
-    config.requestType = 1;
+//    WLLocationPermission *location = [WLLocationPermission sharedPermission];
+//    location.openSettingsIfNeeded = YES;
+//    location.requestType = WLAuthRequestType_Always;
+//    [location requestAuthorization:^(WLAuthorizationResult *result) {
+//        if (result.granted) {
+//
+//        }
+//    }];
     
-    [WLLocationPermission sharedPermission].config = config;
-    [[WLLocationPermission sharedPermission] requestAuthorization:^(WLAuthorizationResult *result) {
+    [[WLCameraPermission sharedPermission] requestAuthorization:^(WLAuthorizationResult *result) {
         if (result.granted) {
             
         }
+    } withConfig:^(WLCameraConfig *config) {
+        config.openSettings_ifNeeded = YES;
     }];
 }
 

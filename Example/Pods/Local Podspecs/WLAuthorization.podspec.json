@@ -45,6 +45,16 @@
         ]
       },
       "source_files": "WLAuthorization/Classes/Location/*"
+    },
+    {
+      "name": "Camera",
+      "frameworks": "AVFoundation",
+      "dependencies": {
+        "WLAuthorization/Base": [
+
+        ]
+      },
+      "source_files": "WLAuthorization/Classes/Camera/*"
     }
   ]
 }

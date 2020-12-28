@@ -14,6 +14,7 @@
 #import "WLAuthorizationResult.h"
 #import "WLAuthorizationTypes.h"
 #import "WLBasePermission.h"
+#import "WLCameraPermission.h"
 #import "WLLocationPermission.h"
 #import "MGAuthManager.h"
 #import "WLAuthorization.h"
@@ -21,6 +22,7 @@
 #import "WLAuthorizationResult.h"
 #import "WLAuthorizationTypes.h"
 #import "WLBasePermission.h"
+#import "WLCameraPermission.h"
 #import "WLLocationPermission.h"
 
 FOUNDATION_EXPORT double WLAuthorizationVersionNumber;

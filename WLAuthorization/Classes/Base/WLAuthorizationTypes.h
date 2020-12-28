@@ -13,13 +13,31 @@
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 
+/**
+ *  权限类型
+ */
 typedef NS_ENUM(NSInteger, WLAuthorizationType) {
-    WLAuthorizationType_Unknown     = 0,    //未知，子类未设置
-    WLAuthorizationType_Location    = 10,   //定位
+    
+    /** 未知，子类未设置 */
+    WLAuthorizationType_Unknown     = 0,
+    
+    /** 相机 */
+    WLAuthorizationType_Camera      = 1,
+    /** 麦克风 */
+    WLAuthorizationType_Microphone  = 2,
+    
+    /** 定位 */
+    WLAuthorizationType_Location    = 10,
+};
+
+typedef NS_ENUM(NSInteger, WLAuthRequestType) {
+    WLAuthRequestType_Always        = 0,    //总是允许
+    WLAuthRequestType_WhenInUse     = 1,    //使用时允许
+    WLAuthRequestType_Once          = 2,    //允许一次
 };
 
 typedef NS_ENUM(NSInteger, WLAuthorizationStatus) {
-    WLAuthorizationStatus_Unknown       = -2,   //未知状态
+    WLAuthorizationStatus_Unknown       = -2,   //未知状态，初始化时的默认值
     WLAuthorizationStatus_NoKey         = -1,   //未在info.plist中添加对应的key
     WLAuthorizationStatus_NotDetermined = 0,    //未请求国权限，权限未定，下次询问
     WLAuthorizationStatus_Disabled      = 1,    //不可用、不支持、受限制 ... 反正就是不能用，用户没法改变改状态

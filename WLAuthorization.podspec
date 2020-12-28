@@ -43,10 +43,19 @@ Pod::Spec.new do |s|
   end
   
   
+  #MARK: 🧭 定位
   s.subspec 'Location' do |location|
       location.frameworks   = 'CoreLocation'
       location.dependency 'WLAuthorization/Base'
       location.source_files = 'WLAuthorization/Classes/Location/*'
+  end
+  
+  #MARK: 📷 相机
+  #MARK: 🎤 麦克风
+  s.subspec 'Camera' do |camera|
+      camera.frameworks   = 'AVFoundation'
+      camera.dependency 'WLAuthorization/Base'
+      camera.source_files = 'WLAuthorization/Classes/Camera/*'
   end
   
 end
