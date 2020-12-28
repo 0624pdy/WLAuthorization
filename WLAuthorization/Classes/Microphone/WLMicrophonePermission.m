@@ -1,12 +1,12 @@
 //
-//  WLCameraPermission.m
+//  WLMicrophonePermission.m
 //  WLAuthorization_Example
 //
-//  Created by jzjy on 2020/12/28.
+//  Created by zhaowl on 2020/12/28.
 //  Copyright © 2020 0624pdy@sina.com. All rights reserved.
 //
 
-#import "WLCameraPermission.h"
+#import "WLMicrophonePermission.h"
 
 #import <AVFoundation/AVFoundation.h>
 
@@ -14,7 +14,7 @@
 
 
 
-@implementation WLCameraConfig
+@implementation WLMicrophoneConfig
 
 - (instancetype)initWithName:(NSString *)name {
     self = [super initWithName:name];
@@ -30,30 +30,30 @@
 
 
 
-@interface WLCameraPermission ()
+@interface WLMicrophonePermission ()
 
-@property (nonatomic,copy) void(^block_config) (WLCameraConfig *config);
-@property (nonatomic,strong) WLCameraConfig *config;
+@property (nonatomic,copy) void(^block_config) (WLMicrophoneConfig *config);
+@property (nonatomic,strong) WLMicrophoneConfig *config;
 
 @end
 
-@implementation WLCameraPermission
+@implementation WLMicrophonePermission
 
 + (instancetype)sharedPermission {
-    static WLCameraPermission *permission = nil;
+    static WLMicrophonePermission *permission = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        permission = [[WLCameraPermission alloc] init];
+        permission = [[WLMicrophonePermission alloc] init];
     });
     return permission;
 }
 + (WLAuthorizationType)authorizationType {
-    return WLAuthorizationType_Camera;
+    return WLAuthorizationType_Microphone;
 }
 - (BOOL)requestAuthorization:(WLAuthResultBlock)completion {
     return [self requestAuthorization:completion withConfig:nil];
 }
-- (BOOL)requestAuthorization:(WLAuthResultBlock)completion withConfig:(void (^)(WLCameraConfig *))config {
+- (BOOL)requestAuthorization:(WLAuthResultBlock)completion withConfig:(void (^)(WLMicrophoneConfig *))config {
     
     BOOL isKeySet = [super requestAuthorization:completion];
     self.block_config = config;
@@ -65,10 +65,10 @@
 
         //可用
         if (enabled) {
-            AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
+            AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeAudio];
             [self handleStatus:status isCallback:NO];
         }
-        //不可用（模拟器不支持摄像头）
+        //不可用（模拟器不支持麦克风）
         else {
             self.result = [WLAuthorizationResult withStatus:WLAuthorizationStatus_Disabled message:@"不可用"];
         }
@@ -90,8 +90,8 @@
     switch (status) {
         case AVAuthorizationStatusNotDetermined: {
             self.result = [WLAuthorizationResult withStatus:WLAuthorizationStatus_NotDetermined message:@"未请求过权限"];
-            [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:^(BOOL granted) {
-                AVAuthorizationStatus newStatus = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
+            [AVCaptureDevice requestAccessForMediaType:AVMediaTypeAudio completionHandler:^(BOOL granted) {
+                AVAuthorizationStatus newStatus = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeAudio];
                 [self handleStatus:newStatus isCallback:YES];
             }];
         }
@@ -144,11 +144,11 @@
 
 #pragma mark - Getter & Setter
 
-- (void)setBlock_config:(void (^)(WLCameraConfig *))block_config {
+- (void)setBlock_config:(void (^)(WLMicrophoneConfig *))block_config {
     _block_config = block_config;
     
     if (_block_config) {
-        _config = [[WLCameraConfig alloc] initWithName:@"相机"];
+        _config = [[WLMicrophoneConfig alloc] initWithName:@"麦克风"];
         _block_config(_config);
     }
 }

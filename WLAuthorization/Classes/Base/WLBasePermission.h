@@ -9,33 +9,48 @@
 #import <Foundation/Foundation.h>
 
 #import "WLAuthorizationProtocol.h"
-#import "WLAuthorizationTypes.h"
+#import "WLAuthorizationResult.h"
 
-@class WLAuthBaseConfig;
-@class WLAuthorizationResult;
 
-typedef void(^WLAuthResultBlock)(WLAuthorizationResult *result);
-typedef void(^WLAuthConfigBlock)(WLAuthBaseConfig *config);
+
 
 
 @interface WLAuthBaseConfig : NSObject
 
 /** 权限名称，如：相机、定位、相册 ...... */
 @property (nonatomic,copy) NSString *authName;
+/** 权限被关闭时，是否弹窗询问用户打开设置界面，默认：NO */
 @property (nonatomic,assign) BOOL openSettings_ifNeeded;
 
-+ (instancetype)configWithName:(NSString *)name;
+/**
+ *  初始化
+ *  @param name - 权限名称，如：定位、相机、相册 ......
+ */
 - (instancetype)initWithName:(NSString *)name;
 
 @end
 
+
+
+
+
 @interface WLBasePermission : NSObject < WLAuthorizationProtocol >
 
+/**
+ *  发起权限请求
+ *
+ *  @param completion - 结果回调
+ */
 - (BOOL)requestAuthorization:(WLAuthResultBlock)completion;
 
+/**
+ *  结果回调代码块
+ */
 @property (nonatomic,copy) WLAuthResultBlock resultBlock;
-@property (nonatomic,copy) WLAuthConfigBlock configBlock;
 
+/**
+ *  结果
+ */
 @property (nonatomic,strong) WLAuthorizationResult *result;
 
 @end

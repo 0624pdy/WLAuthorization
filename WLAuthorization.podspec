@@ -51,11 +51,31 @@ Pod::Spec.new do |s|
   end
   
   #MARK: 📷 相机
-  #MARK: 🎤 麦克风
   s.subspec 'Camera' do |camera|
       camera.frameworks   = 'AVFoundation'
       camera.dependency 'WLAuthorization/Base'
       camera.source_files = 'WLAuthorization/Classes/Camera/*'
+  end
+  
+  #MARK: 🎤 麦克风
+  s.subspec 'Microphone' do |microphone|
+      microphone.frameworks   = 'AVFoundation'
+      microphone.dependency 'WLAuthorization/Base'
+      microphone.source_files = 'WLAuthorization/Classes/Microphone/*'
+  end
+  
+  #MARK: 📖 相册
+  s.subspec 'PhotoLibrary' do |photoLibrary|
+      photoLibrary.frameworks   = 'AVFoundation'
+      photoLibrary.dependency 'WLAuthorization/Base'
+      photoLibrary.source_files = 'WLAuthorization/Classes/PhotoLibrary/*'
+  end
+  
+  #MARK: 📶 蓝牙
+  s.subspec 'Bluetooth' do |bluetooth|
+      bluetooth.frameworks   = 'AVFoundation'
+      bluetooth.dependency 'WLAuthorization/Base'
+      bluetooth.source_files = 'WLAuthorization/Classes/Bluetooth/*'
   end
   
 end

@@ -32,4 +32,8 @@
  */
 - (void)updateStatus:(WLAuthorizationStatus)status message:(NSString *)message;
 
+
+/** 是否需要回调 */
+@property (nonatomic,assign,readonly) BOOL shouldCallback;
+
 @end

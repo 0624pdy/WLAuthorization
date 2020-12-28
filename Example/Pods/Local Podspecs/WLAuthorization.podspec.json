@@ -55,6 +55,36 @@
         ]
       },
       "source_files": "WLAuthorization/Classes/Camera/*"
+    },
+    {
+      "name": "Microphone",
+      "frameworks": "AVFoundation",
+      "dependencies": {
+        "WLAuthorization/Base": [
+
+        ]
+      },
+      "source_files": "WLAuthorization/Classes/Microphone/*"
+    },
+    {
+      "name": "PhotoLibrary",
+      "frameworks": "AVFoundation",
+      "dependencies": {
+        "WLAuthorization/Base": [
+
+        ]
+      },
+      "source_files": "WLAuthorization/Classes/PhotoLibrary/*"
+    },
+    {
+      "name": "Bluetooth",
+      "frameworks": "AVFoundation",
+      "dependencies": {
+        "WLAuthorization/Base": [
+
+        ]
+      },
+      "source_files": "WLAuthorization/Classes/Bluetooth/*"
     }
   ]
 }

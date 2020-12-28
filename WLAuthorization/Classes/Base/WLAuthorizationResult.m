@@ -42,4 +42,17 @@
     _granted        = (_currentStatus == WLAuthorizationStatus_Authorized);
 }
 
+- (BOOL)shouldCallback {
+    //不可用：✅ 不支持或受限制 --> 直接回调
+    //可用；✅ 直接回调
+    //未设置key：✅ 直接返回
+    //已关闭：❌ 询问是否打开设置
+    //未询问：❌ 请求权限
+    return (
+        self.currentStatus == WLAuthorizationStatus_Disabled ||
+        self.currentStatus == WLAuthorizationStatus_Authorized ||
+        self.currentStatus == WLAuthorizationStatus_NoKey
+    );
+}
+
 @end

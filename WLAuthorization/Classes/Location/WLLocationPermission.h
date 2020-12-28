@@ -10,6 +10,8 @@
 
 
 
+
+
 @interface WLLocationConfig : WLAuthBaseConfig
 
 /**
@@ -21,8 +23,16 @@
 
 
 
+
+
 @interface WLLocationPermission : WLBasePermission
 
+/**
+ *  发起权限请求
+ *
+ *  @param completion   - 结果回调
+ *  @param config            - 配置信息
+ */
 - (BOOL)requestAuthorization:(WLAuthResultBlock)completion withConfig:(void(^)(WLLocationConfig *config))config;
 
 @end

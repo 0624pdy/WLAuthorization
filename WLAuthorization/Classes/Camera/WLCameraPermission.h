@@ -6,14 +6,28 @@
 //  Copyright © 2020 0624pdy@sina.com. All rights reserved.
 //
 
-#import <WLAuthorization/WLAuthorization.h>
+#import "WLBasePermission.h"
+
+
+
+
 
 @interface WLCameraConfig : WLAuthBaseConfig
 
 @end
 
+
+
+
+
 @interface WLCameraPermission : WLBasePermission
 
+/**
+ *  发起权限请求
+ *
+ *  @param completion   - 结果回调
+ *  @param config            - 配置信息
+ */
 - (BOOL)requestAuthorization:(WLAuthResultBlock)completion withConfig:(void(^)(WLCameraConfig *config))config;
 
 @end

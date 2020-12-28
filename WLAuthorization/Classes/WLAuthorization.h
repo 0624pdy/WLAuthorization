@@ -9,13 +9,10 @@
 #ifndef WLAuthorization_h
 #define WLAuthorization_h
 
-#import "WLAuthorizationProtocol.h"
-#import "WLAuthorizationTypes.h"
-
-#import "WLBasePermission.h"
-#import "WLAuthorizationResult.h"
+#import "WLBasePermission.h"        //权限基类
 
 #import "WLLocationPermission.h"    //定位
 #import "WLCameraPermission.h"      //相机
+#import "WLMicrophonePermission.h"  //麦克风
 
 #endif /* WLAuthorization_h */

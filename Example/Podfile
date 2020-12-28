@@ -9,6 +9,7 @@ target 'WLAuthorization_Example' do
   
   pod 'WLAuthorization', :path => '../'
 #  pod 'WLAuthorization/Location', :path => '../'
+#  pod 'WLAuthorization/Camera', :path => '../'
 #  pod 'WLAuthorization', '0.0.1'
   
   

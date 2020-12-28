@@ -10,20 +10,18 @@
 
 #import <CoreLocation/CoreLocation.h>
 
-#import "WLAuthorizationResult.h"
-
 
 
 
 
 @implementation WLLocationConfig
 
-+ (instancetype)configWithName:(NSString *)name {
-    WLLocationConfig *config = [super configWithName:name];
-    if (config) {
-        config.requestType = WLAuthRequestType_Always;
+- (instancetype)initWithName:(NSString *)name {
+    self = [super initWithName:name];
+    if (self) {
+        _requestType = WLAuthRequestType_Always;
     }
-    return config;
+    return self;
 }
 
 @end
@@ -35,6 +33,7 @@
 @interface WLLocationPermission () < CLLocationManagerDelegate >
 
 @property (nonatomic,strong) CLLocationManager *locationManager;
+@property (nonatomic,copy) void(^block_config) (WLLocationConfig *config);
 @property (nonatomic,strong) WLLocationConfig *config;
 
 @end
@@ -56,16 +55,16 @@
     return @"定位";
 }
 - (BOOL)requestAuthorization:(WLAuthResultBlock)completion withConfig:(void (^)(WLLocationConfig *))config {
-    self.configBlock = config;
     
     BOOL isKeySet = [super requestAuthorization:completion];
+    self.block_config = config;
     
     //info.plist文件中已设置key
     if (isKeySet) {
         
         BOOL enabled = [CLLocationManager locationServicesEnabled];
         
-        //定位可用
+        //可用
         if (enabled) {
             
             CLAuthorizationStatus status;
@@ -78,7 +77,7 @@
 
             [self handleStatus:status isCallback:NO];
         }
-        //定位不可用
+        //不可用
         else {
             self.result = [WLAuthorizationResult withStatus:WLAuthorizationStatus_Disabled message:@"不可用"];
         }
@@ -89,7 +88,7 @@
     }
     
     //回调
-    if (completion && self.result.currentStatus == WLAuthorizationStatus_Authorized) {
+    if (completion && self.result.shouldCallback) {
         completion(self.result);
     }
     
@@ -130,7 +129,7 @@
                 self.result = [WLAuthorizationResult withStatus:WLAuthorizationStatus_Denied message:@"已拒绝"];
                 
                 if (self.config.openSettings_ifNeeded) {
-                    NSString *message = [NSString stringWithFormat:@"您已拒绝APP访问您的%@，请到\n[设置 - 隐私 - 定位]\n中开启权限", [WLLocationPermission name]];
+                    NSString *message = [NSString stringWithFormat:@"您已拒绝APP访问您的%@，请到\n[设置 - 隐私 - %@]\n中开启权限", self.config.authName, self.config.authName];
                     [self alertWithMessage:message cancel:@"取消" confirmTitle:@"去设置"];
                 }
             }
@@ -202,7 +201,8 @@
 
 
 
-#pragma mark -
+
+#pragma mark - Getter & Setter
 
 - (CLLocationManager *)locationManager {
     if (!_locationManager) {
@@ -211,12 +211,12 @@
     }
     return _locationManager;
 }
-- (void)setConfigBlock:(WLAuthConfigBlock)configBlock {
-    [super setConfigBlock:configBlock];
+- (void)setBlock_config:(void (^)(WLLocationConfig *))block_config {
+    _block_config = block_config;
     
-    if (configBlock) {
-        _config = [WLLocationConfig configWithName:@"定位"];
-        configBlock(_config);
+    if (_block_config) {
+        _config = [[WLLocationConfig alloc] initWithName:@"定位"];
+        _block_config(_config);
     }
 }
 

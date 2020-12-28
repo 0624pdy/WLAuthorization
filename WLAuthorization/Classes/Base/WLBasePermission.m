@@ -18,9 +18,6 @@
 
 @implementation WLAuthBaseConfig
 
-+ (instancetype)configWithName:(NSString *)name {
-    return [[WLAuthBaseConfig alloc] init];
-}
 - (instancetype)initWithName:(NSString *)name {
     self = [super init];
     if (self) {

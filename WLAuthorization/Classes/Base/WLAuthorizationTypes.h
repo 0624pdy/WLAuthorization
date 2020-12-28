@@ -13,6 +13,8 @@
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 
+@class WLAuthorizationResult;
+
 /**
  *  权限类型
  */
@@ -39,10 +41,12 @@ typedef NS_ENUM(NSInteger, WLAuthRequestType) {
 typedef NS_ENUM(NSInteger, WLAuthorizationStatus) {
     WLAuthorizationStatus_Unknown       = -2,   //未知状态，初始化时的默认值
     WLAuthorizationStatus_NoKey         = -1,   //未在info.plist中添加对应的key
-    WLAuthorizationStatus_NotDetermined = 0,    //未请求国权限，权限未定，下次询问
+    WLAuthorizationStatus_NotDetermined = 0,    //未请求过权限，权限未定，下次询问
     WLAuthorizationStatus_Disabled      = 1,    //不可用、不支持、受限制 ... 反正就是不能用，用户没法改变改状态
     WLAuthorizationStatus_Denied        = 2,    //用户明确点了拒绝，或者设置中为NO
     WLAuthorizationStatus_Authorized    = 3,    //已同意，已授权
 };
+
+typedef void(^WLAuthResultBlock)(WLAuthorizationResult *result);
 
 #endif /* WLAuthorizationTypes_h */

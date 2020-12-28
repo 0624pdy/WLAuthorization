@@ -10,6 +10,10 @@
 
 #import <WLAuthorization/WLAuthorization.h>
 
+//#import <WLAuthorization/WLLocationPermission.h>
+//#import <WLAuthorization/WLCameraPermission.h>
+//#import <WLAuthorization/WLMicrophonePermission.h>
+
 @interface WLViewController ()
 
 @end
@@ -22,24 +26,32 @@
     
     NSLog(@"%@", [[NSBundle mainBundle] infoDictionary]);
     
-//    WLLocationPermission *location = [WLLocationPermission sharedPermission];
-//    location.openSettingsIfNeeded = YES;
-//    location.requestType = WLAuthRequestType_Always;
-//    [location requestAuthorization:^(WLAuthorizationResult *result) {
+   
+//    [[WLLocationPermission sharedPermission] requestAuthorization:^(WLAuthorizationResult *result) {
 //        if (result.granted) {
 //
 //        }
+//    } withConfig:^(WLLocationConfig *config) {
+//        config.openSettings_ifNeeded = YES;
+//        config.requestType = WLAuthRequestType_Always;
 //    }];
     
-    [[WLCameraPermission sharedPermission] requestAuthorization:^(WLAuthorizationResult *result) {
-        if (result.granted) {
-            
-        }
-    } withConfig:^(WLCameraConfig *config) {
-        config.openSettings_ifNeeded = YES;
-    }];
+//    [[WLCameraPermission sharedPermission] requestAuthorization:^(WLAuthorizationResult *result) {
+//        if (result.granted) {
+//
+//        }
+//    } withConfig:^(WLCameraConfig *config) {
+//        config.openSettings_ifNeeded = YES;
+//    }];
+    
+//    [[WLMicrophonePermission sharedPermission] requestAuthorization:^(WLAuthorizationResult *result) {
+//        if (result.granted) {
+//            
+//        }
+//    } withConfig:^(WLMicrophoneConfig *config) {
+//        config.openSettings_ifNeeded = YES;
+//    }];
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
