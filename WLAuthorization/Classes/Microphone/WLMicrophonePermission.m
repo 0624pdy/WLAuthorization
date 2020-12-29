@@ -65,7 +65,7 @@
         [self getStatus_0];
         
         //⭕️ 方式二
-        [self getStatus_1];
+        //[self getStatus_1];
     }
     //info.plist文件中未设置key
     else {
