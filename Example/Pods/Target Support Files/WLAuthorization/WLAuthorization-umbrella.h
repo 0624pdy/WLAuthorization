@@ -18,6 +18,7 @@
 #import "WLLocationPermission.h"
 #import "MGAuthManager.h"
 #import "WLMicrophonePermission.h"
+#import "WLPhotoLibraryPermission.h"
 #import "WLAuthorization.h"
 #import "WLAuthorizationProtocol.h"
 #import "WLAuthorizationResult.h"
@@ -26,6 +27,7 @@
 #import "WLCameraPermission.h"
 #import "WLLocationPermission.h"
 #import "WLMicrophonePermission.h"
+#import "WLPhotoLibraryPermission.h"
 
 FOUNDATION_EXPORT double WLAuthorizationVersionNumber;
 FOUNDATION_EXPORT const unsigned char WLAuthorizationVersionString[];

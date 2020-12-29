@@ -66,9 +66,16 @@ Pod::Spec.new do |s|
   
   #MARK: 📖 相册
   s.subspec 'PhotoLibrary' do |photoLibrary|
-      photoLibrary.frameworks   = 'AVFoundation'
+      photoLibrary.frameworks   = 'AssetsLibrary', 'Photos'
       photoLibrary.dependency 'WLAuthorization/Base'
       photoLibrary.source_files = 'WLAuthorization/Classes/PhotoLibrary/*'
+  end
+  
+  #MARK: 📖 通讯录
+  s.subspec 'Contact' do |contact|
+      contact.frameworks   = 'AVFoundation'
+      contact.dependency 'WLAuthorization/Base'
+      contact.source_files = 'WLAuthorization/Classes/Contact/*'
   end
   
   #MARK: 📶 蓝牙

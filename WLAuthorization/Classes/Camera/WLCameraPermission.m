@@ -111,7 +111,7 @@
                 self.result = [WLAuthorizationResult withStatus:WLAuthorizationStatus_Denied message:@"已拒绝"];
                 
                 if (self.config.openSettings_ifNeeded) {
-                    NSString *message = [NSString stringWithFormat:@"您已拒绝APP访问您的%@，请到\n[设置 - 隐私 - %@]\n中开启权限", self.config.authName, self.config.authName];
+                    NSString *message = [NSString stringWithFormat:@"您已拒绝APP访问%@，请到\n[设置 - 隐私 - %@]\n中允许访问%@", self.config.authName, self.config.authName, self.config.authName];
                     [self alertWithMessage:message cancel:@"取消" confirmTitle:@"去设置"];
                 }
             }

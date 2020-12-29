@@ -51,7 +51,15 @@
     return (
         self.currentStatus == WLAuthorizationStatus_Disabled ||
         self.currentStatus == WLAuthorizationStatus_Authorized ||
-        self.currentStatus == WLAuthorizationStatus_NoKey
+        self.currentStatus == WLAuthorizationStatus_NoKey ||
+        self.currentStatus == WLAuthorizationStatus_Limited
+    );
+}
+
+- (BOOL)available {
+    return (
+        _currentStatus == WLAuthorizationStatus_Authorized ||
+        _currentStatus == WLAuthorizationStatus_Limited
     );
 }
 

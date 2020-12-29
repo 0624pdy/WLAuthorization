@@ -6,6 +6,7 @@ PODS:
     - WLAuthorization/Base (= 0.0.1)
     - WLAuthorization/Bluetooth (= 0.0.1)
     - WLAuthorization/Camera (= 0.0.1)
+    - WLAuthorization/Contact (= 0.0.1)
     - WLAuthorization/Location (= 0.0.1)
     - WLAuthorization/Microphone (= 0.0.1)
     - WLAuthorization/PhotoLibrary (= 0.0.1)
@@ -13,6 +14,8 @@ PODS:
   - WLAuthorization/Bluetooth (0.0.1):
     - WLAuthorization/Base
   - WLAuthorization/Camera (0.0.1):
+    - WLAuthorization/Base
+  - WLAuthorization/Contact (0.0.1):
     - WLAuthorization/Base
   - WLAuthorization/Location (0.0.1):
     - WLAuthorization/Base
@@ -35,8 +38,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   JLAuthorizationManager: 0e2f3ebe2e0945e314af6f2ba8a4acc4764d530b
-  WLAuthorization: cf9b407d17a738b29a73fec79d7816d7c07deea2
+  WLAuthorization: ef59396a59aabff77df8bf722be33b1ad98ee488
 
 PODFILE CHECKSUM: 155551579530af6fd1a2edefa5234025ea5a1619
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.10.0

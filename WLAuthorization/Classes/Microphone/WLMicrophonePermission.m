@@ -61,17 +61,11 @@
     //info.plist文件中已设置key
     if (isKeySet) {
 
-        BOOL enabled = [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera];
-
-        //可用
-        if (enabled) {
-            AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeAudio];
-            [self handleStatus:status isCallback:NO];
-        }
-        //不可用（模拟器不支持麦克风）
-        else {
-            self.result = [WLAuthorizationResult withStatus:WLAuthorizationStatus_Disabled message:@"不可用"];
-        }
+        //⭕️ 方式一
+        [self getStatus_0];
+        
+        //⭕️ 方式二
+        [self getStatus_1];
     }
     //info.plist文件中未设置key
     else {
@@ -86,6 +80,26 @@
     return self.result.granted;
 }
 
+
+
+
+
+#pragma mark - 方式一
+
+- (void)getStatus_0 {
+    
+    AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeAudio];
+    BOOL enabled = (status != AVAuthorizationStatusRestricted);
+
+    //可用
+    if (enabled) {
+        [self handleStatus:status isCallback:NO];
+    }
+    //不可用（模拟器不支持麦克风）
+    else {
+        self.result = [WLAuthorizationResult withStatus:WLAuthorizationStatus_Disabled message:@"不可用"];
+    }
+}
 - (void)handleStatus:(AVAuthorizationStatus)status isCallback:(BOOL)isCallback {
     switch (status) {
         case AVAuthorizationStatusNotDetermined: {
@@ -111,13 +125,66 @@
                 self.result = [WLAuthorizationResult withStatus:WLAuthorizationStatus_Denied message:@"已拒绝"];
                 
                 if (self.config.openSettings_ifNeeded) {
-                    NSString *message = [NSString stringWithFormat:@"您已拒绝APP访问您的%@，请到\n[设置 - 隐私 - %@]\n中开启权限", self.config.authName, self.config.authName];
+                    NSString *message = [NSString stringWithFormat:@"您已拒绝APP访问%@，请到\n[设置 - 隐私 - %@]\n中允许访问%@", self.config.authName, self.config.authName, self.config.authName];
                     [self alertWithMessage:message cancel:@"取消" confirmTitle:@"去设置"];
                 }
             }
         }
             break;
         case AVAuthorizationStatusAuthorized: {
+            if (isCallback) {
+                [self.result updateStatus:WLAuthorizationStatus_Authorized message:@"已授权"];
+            } else {
+                self.result = [WLAuthorizationResult withStatus:WLAuthorizationStatus_Authorized message:@"已授权"];
+            }
+        }
+            break;
+        default:
+            break;
+    }
+    
+    if (isCallback && self.result.previousStatus != self.result.currentStatus) {
+        //回调
+        if (self.resultBlock) {
+            self.resultBlock(self.result);
+        }
+    }
+}
+
+
+
+
+
+#pragma mark - 方式二
+
+- (void)getStatus_1 {
+    AVAudioSessionRecordPermission permission = [AVAudioSession sharedInstance].recordPermission;
+    [self handlePermission:permission isCallback:NO];
+}
+- (void)handlePermission:(AVAudioSessionRecordPermission)permission isCallback:(BOOL)isCallback {
+    switch(permission) {
+        case AVAudioSessionRecordPermissionUndetermined: {
+            self.result = [WLAuthorizationResult withStatus:WLAuthorizationStatus_NotDetermined message:@"未请求过权限"];
+            [[AVAudioSession sharedInstance] requestRecordPermission:^(BOOL granted) {
+                AVAudioSessionRecordPermission permission = [AVAudioSession sharedInstance].recordPermission;
+                [self handlePermission:permission isCallback:YES];
+            }];
+        }
+            break;
+        case AVAudioSessionRecordPermissionDenied: {
+            if (isCallback) {
+                [self.result updateStatus:WLAuthorizationStatus_Denied message:@"已拒绝"];
+            } else {
+                self.result = [WLAuthorizationResult withStatus:WLAuthorizationStatus_Denied message:@"已拒绝"];
+                
+                if (self.config.openSettings_ifNeeded) {
+                    NSString *message = [NSString stringWithFormat:@"您已拒绝APP访问%@，请到\n[设置 - 隐私 - %@]\n中允许访问%@", self.config.authName, self.config.authName, self.config.authName];
+                    [self alertWithMessage:message cancel:@"取消" confirmTitle:@"去设置"];
+                }
+            }
+        }
+            break;
+        case AVAudioSessionRecordPermissionGranted: {
             if (isCallback) {
                 [self.result updateStatus:WLAuthorizationStatus_Authorized message:@"已授权"];
             } else {

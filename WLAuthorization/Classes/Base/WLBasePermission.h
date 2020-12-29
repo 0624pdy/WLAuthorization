@@ -53,4 +53,15 @@
  */
 @property (nonatomic,strong) WLAuthorizationResult *result;
 
+
+
+
+
+#pragma mark -
+
+/**
+ *  打开系统设置
+ */
++ (void)openSettings;
+
 @end

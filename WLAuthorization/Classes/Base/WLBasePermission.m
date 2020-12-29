@@ -56,6 +56,10 @@
         key = @"NSCameraUsageDescription";
     } else if (type == WLAuthorizationType_Microphone) {
         key = @"NSMicrophoneUsageDescription";
+    } else if (type == WLAuthorizationType_PhotoLibrary) {
+        key = @"NSPhotoLibraryUsageDescription";    //NSPhotoLibraryAddUsageDescription
+    } else if (type == WLAuthorizationType_Contact) {
+        key = @"NSContactsUsageDescription";
     } else if (type == WLAuthorizationType_Location) {
         key = @"NSLocationAlwaysAndWhenInUseUsageDescription";
     }
@@ -71,21 +75,7 @@
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:message preferredStyle:UIAlertControllerStyleAlert];
     [alert addAction:[UIAlertAction actionWithTitle:cancelTitle style:UIAlertActionStyleCancel handler:nil]];
     [alert addAction:[UIAlertAction actionWithTitle:confirmTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
-        
-        NSURL *url = nil;
-//        url = [NSURL URLWithString:@"prefs:root=LOCATION_SERVICES"];
-//        url = [NSURL URLWithString:@"prefs:root=com.pdy.WLAuthorization"];
-//        url = [NSURL URLWithString:@"App-Prefs:root=LOCATION_SERVICES"];
-//        url = [NSURL URLWithString:@"App-Prefs:root=com.pdy.WLAuthorization"];
-        url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
-        
-        if ([[UIApplication sharedApplication] canOpenURL:url]) {
-            if (@available(iOS 10.0, *)) {
-                [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
-            } else {
-                [[UIApplication sharedApplication] openURL:url];
-            }
-        }
+        [WLBasePermission openSettings];
     }]];
     dispatch_async(dispatch_get_main_queue(), ^{
         [UIApplication.sharedApplication.delegate.window.rootViewController presentViewController:alert animated:YES completion:nil];
@@ -101,6 +91,28 @@
     _resultBlock = completion;
     [UIApplication sharedApplication];
     return [[self class] hasSpecificPermissionKeyFromInfoPlist];
+}
+
+
+
+
+#pragma mark -
+
++ (void)openSettings {
+    NSURL *url = nil;
+//        url = [NSURL URLWithString:@"prefs:root=LOCATION_SERVICES"];
+//        url = [NSURL URLWithString:@"prefs:root=com.pdy.WLAuthorization"];
+//        url = [NSURL URLWithString:@"App-Prefs:root=LOCATION_SERVICES"];
+//        url = [NSURL URLWithString:@"App-Prefs:root=com.pdy.WLAuthorization"];
+    url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+    
+    if ([[UIApplication sharedApplication] canOpenURL:url]) {
+        if (@available(iOS 10.0, *)) {
+            [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
+        } else {
+            [[UIApplication sharedApplication] openURL:url];
+        }
+    }
 }
 
 @end

@@ -68,13 +68,26 @@
     },
     {
       "name": "PhotoLibrary",
-      "frameworks": "AVFoundation",
+      "frameworks": [
+        "AssetsLibrary",
+        "Photos"
+      ],
       "dependencies": {
         "WLAuthorization/Base": [
 
         ]
       },
       "source_files": "WLAuthorization/Classes/PhotoLibrary/*"
+    },
+    {
+      "name": "Contact",
+      "frameworks": "AVFoundation",
+      "dependencies": {
+        "WLAuthorization/Base": [
+
+        ]
+      },
+      "source_files": "WLAuthorization/Classes/Contact/*"
     },
     {
       "name": "Bluetooth",

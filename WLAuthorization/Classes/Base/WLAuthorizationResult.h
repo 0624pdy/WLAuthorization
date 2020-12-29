@@ -36,4 +36,6 @@
 /** 是否需要回调 */
 @property (nonatomic,assign,readonly) BOOL shouldCallback;
 
+@property (nonatomic,assign,readonly) BOOL available;
+
 @end

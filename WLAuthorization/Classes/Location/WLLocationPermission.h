@@ -14,9 +14,7 @@
 
 @interface WLLocationConfig : WLAuthBaseConfig
 
-/**
- *  请求类型，详见枚举：WLAuthRequestType
- */
+/** 请求类型，详见枚举：WLAuthRequestType */
 @property (nonatomic,assign) WLAuthRequestType requestType;
 
 @end
@@ -31,7 +29,7 @@
  *  发起权限请求
  *
  *  @param completion   - 结果回调
- *  @param config            - 配置信息
+ *  @param config       - 配置信息
  */
 - (BOOL)requestAuthorization:(WLAuthResultBlock)completion withConfig:(void(^)(WLLocationConfig *config))config;
 
