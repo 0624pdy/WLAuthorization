@@ -1,6 +1,0 @@
-framework module JLAuthorizationManager {
-  umbrella header "JLAuthorizationManager-umbrella.h"
-
-  export *
-  module * { export * }
-}
