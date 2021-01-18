@@ -38,8 +38,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   JLAuthorizationManager: 0e2f3ebe2e0945e314af6f2ba8a4acc4764d530b
-  WLAuthorization: e9be3e9c60eda16dde5a3293a97ebec1f10b0a1b
+  WLAuthorization: ef59396a59aabff77df8bf722be33b1ad98ee488
 
 PODFILE CHECKSUM: 155551579530af6fd1a2edefa5234025ea5a1619
 
-COCOAPODS: 1.5.2
+COCOAPODS: 1.10.0
