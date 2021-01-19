@@ -39,7 +39,6 @@
 /* Begin PBXFileReference section */
 		156E8CB4AF3D14710F80E3C2 /* Pods_WLAuthorization_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WLAuthorization_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DDECF37B0FB23EBF0D79CD6 /* Pods-WLAuthorization_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WLAuthorization_Example.debug.xcconfig"; path = "Target Support Files/Pods-WLAuthorization_Example/Pods-WLAuthorization_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		33B03A17DD927D6401BFE2FA /* Pods-WLAuthorization_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WLAuthorization_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-WLAuthorization_Example/Pods-WLAuthorization_Example.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* WLAuthorization_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WLAuthorization_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -62,7 +61,6 @@
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		720CAD725A38C9E0A9FB6367 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		8C814ECFF69749A1DE63BAAD /* Pods-WLAuthorization_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WLAuthorization_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WLAuthorization_Example/Pods-WLAuthorization_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		9412D042DCB8F2E64B4FE4E3 /* Pods-WLAuthorization_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WLAuthorization_Example.release.xcconfig"; path = "Target Support Files/Pods-WLAuthorization_Example/Pods-WLAuthorization_Example.release.xcconfig"; sourceTree = "<group>"; };
 		A86CE8E7A4E777C6ABAA41BD /* WLAuthorization.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = WLAuthorization.podspec; path = ../WLAuthorization.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		EBC3A0D66332CCA9E109F2DE /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -93,13 +91,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		02DEE0962597161F00B865FE /* Files */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Files;
-			sourceTree = "<group>";
-		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
@@ -140,7 +131,6 @@
 				6003F59D195388D20070C39A /* WLAppDelegate.m */,
 				6003F5A5195388D20070C39A /* WLViewController.h */,
 				6003F5A6195388D20070C39A /* WLViewController.m */,
-				02DEE0962597161F00B865FE /* Files */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
 			name = "Example for WLAuthorization";
@@ -195,8 +185,6 @@
 			children = (
 				1DDECF37B0FB23EBF0D79CD6 /* Pods-WLAuthorization_Example.debug.xcconfig */,
 				9412D042DCB8F2E64B4FE4E3 /* Pods-WLAuthorization_Example.release.xcconfig */,
-				8C814ECFF69749A1DE63BAAD /* Pods-WLAuthorization_Example.debug.xcconfig */,
-				33B03A17DD927D6401BFE2FA /* Pods-WLAuthorization_Example.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";

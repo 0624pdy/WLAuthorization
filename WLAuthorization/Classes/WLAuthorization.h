@@ -15,5 +15,6 @@
 #import "WLCameraPermission.h"          //相机
 #import "WLPhotoLibraryPermission.h"    //相册
 #import "WLMicrophonePermission.h"      //麦克风
+#import "WLContactPermission.h"         //通讯录
 
 #endif /* WLAuthorization_h */

@@ -40,24 +40,20 @@
 
 @implementation WLPhotoLibraryPermission
 
-+ (instancetype)sharedPermission {
-    static WLPhotoLibraryPermission *permission = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        permission = [[WLPhotoLibraryPermission alloc] init];
-    });
-    return permission;
-}
+WLSharedPermission(WLPhotoLibraryPermission)
+
 + (WLAuthorizationType)authorizationType {
     return WLAuthorizationType_PhotoLibrary;
 }
-- (BOOL)requestAuthorization:(WLAuthResultBlock)completion {
-    return [self requestAuthorization:completion withConfig:nil];
+- (void)requestAuthorization:(WLAuthResultBlock)completion {
+    [self requestAuthorization:completion withConfig:nil];
 }
-- (BOOL)requestAuthorization:(WLAuthResultBlock)completion withConfig:(void (^)(WLPhotoLibraryConfig *))config {
+- (void)requestAuthorization:(WLAuthResultBlock)completion withConfig:(void (^)(WLPhotoLibraryConfig *))config {
+    [super requestAuthorization:completion];
     
-    BOOL isKeySet = [super requestAuthorization:completion];
     self.block_config = config;
+    
+    BOOL isKeySet = WLPhotoLibraryPermission.hasSetPermissionKeyInInfoPlist;
     
     //info.plist文件中已设置key
     if (isKeySet) {
@@ -100,8 +96,6 @@
     if (completion && self.result.shouldCallback) {
         completion(self.result);
     }
-    
-    return self.result.granted;
 }
 
 
@@ -117,10 +111,13 @@
         case PHAuthorizationStatusNotDetermined: {
             self.result = [WLAuthorizationResult withStatus:WLAuthorizationStatus_NotDetermined message:@"未请求过权限"];
             if (@available(iOS 14, *)) {
+                
+                //读写权限：读写（默认）/只能写入
                 PHAccessLevel accessLevel = PHAccessLevelReadWrite;
                 if (self.config.accessLevel == WLAuthorizationAccessLevel_WriteOnly) {
                     accessLevel = PHAccessLevelAddOnly;
                 }
+                
                 [PHPhotoLibrary requestAuthorizationForAccessLevel:accessLevel handler:^(PHAuthorizationStatus newStatus) {
                     [self handleStatus_for_iOS_8_now:newStatus isCallback:YES];
                 }];
@@ -132,6 +129,7 @@
         }
             break;
             
+        //不可用：回调
         case PHAuthorizationStatusRestricted: {
             if (isCallback) {
                 [self.result updateStatus:WLAuthorizationStatus_Disabled message:@"不可用"];

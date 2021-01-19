@@ -15,6 +15,17 @@
 
 @class WLAuthorizationResult;
 
+#define WLSharedPermission(clsName) \
+\
++ (instancetype)sharedPermission { \
+    static clsName *permission = nil; \
+    static dispatch_once_t onceToken;\
+    dispatch_once(&onceToken, ^{ \
+        permission = [[clsName alloc] init]; \
+    }); \
+    return permission; \
+}
+
 /**
  *  权限类型
  */
@@ -49,7 +60,7 @@ typedef NS_ENUM(NSInteger, WLAuthorizationStatus) {
     WLAuthorizationStatus_Disabled      = 1,    //不支持、不可用 ... 反正就是不能用，用户没法改变改状态
     WLAuthorizationStatus_Denied        = 2,    //已拒绝，或者设置中为NO
     WLAuthorizationStatus_Authorized    = 3,    //已同意
-    WLAuthorizationStatus_Limited       = 4,    //受限制的
+    WLAuthorizationStatus_Limited       = 4,    //受限制的（只能使用部分功能）
 };
 
 typedef NS_ENUM(NSInteger, WLAuthorizationAccessLevel) {

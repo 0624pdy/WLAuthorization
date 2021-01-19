@@ -84,7 +84,7 @@
 	<key>NSLocationTemporaryUsageDescriptionDictionary</key>
 	<dict>
 		<key>aaa</key>
-		<string>aaa</string>
+		<string>content for key &quot;aaa&quot;</string>
 	</dict>
 	<key>NSLocationUsageDescription</key>
 	<string>location</string>

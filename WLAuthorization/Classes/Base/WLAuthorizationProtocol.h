@@ -32,7 +32,7 @@
 /**
  *  info.plist文件中是否有添加权限相关的key
  */
-@property (nonatomic,class,readonly) BOOL hasSpecificPermissionKeyFromInfoPlist;
+@property (nonatomic,class,readonly) BOOL hasSetPermissionKeyInInfoPlist;
 
 /**
  *  当权限被禁用时，可以调用该方法展示弹窗询问是否跳转到设置界面

@@ -12,7 +12,7 @@
 
 
 
-@interface WLCameraConfig : WLAuthBaseConfig
+@interface WLCameraConfig : WLAuthConfig
 
 @end
 
@@ -28,6 +28,6 @@
  *  @param completion   - 结果回调
  *  @param config       - 配置信息
  */
-- (BOOL)requestAuthorization:(WLAuthResultBlock)completion withConfig:(void(^)(WLCameraConfig *config))config;
+- (void)requestAuthorization:(WLAuthResultBlock)completion withConfig:(void(^)(WLCameraConfig *config))config;
 
 @end

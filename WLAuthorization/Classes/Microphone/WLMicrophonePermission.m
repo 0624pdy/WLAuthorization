@@ -16,13 +16,13 @@
 
 @implementation WLMicrophoneConfig
 
-- (instancetype)initWithName:(NSString *)name {
-    self = [super initWithName:name];
-    if (self) {
-        
-    }
-    return self;
-}
+//- (instancetype)initWithName:(NSString *)name {
+//    self = [super initWithName:name];
+//    if (self) {
+//        
+//    }
+//    return self;
+//}
 
 @end
 
@@ -39,24 +39,20 @@
 
 @implementation WLMicrophonePermission
 
-+ (instancetype)sharedPermission {
-    static WLMicrophonePermission *permission = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        permission = [[WLMicrophonePermission alloc] init];
-    });
-    return permission;
-}
+WLSharedPermission(WLMicrophonePermission)
+
 + (WLAuthorizationType)authorizationType {
     return WLAuthorizationType_Microphone;
 }
-- (BOOL)requestAuthorization:(WLAuthResultBlock)completion {
-    return [self requestAuthorization:completion withConfig:nil];
+- (void)requestAuthorization:(WLAuthResultBlock)completion {
+    [self requestAuthorization:completion withConfig:nil];
 }
-- (BOOL)requestAuthorization:(WLAuthResultBlock)completion withConfig:(void (^)(WLMicrophoneConfig *))config {
+- (void)requestAuthorization:(WLAuthResultBlock)completion withConfig:(void (^)(WLMicrophoneConfig *))config {
+    [super requestAuthorization:completion];
     
-    BOOL isKeySet = [super requestAuthorization:completion];
     self.block_config = config;
+    
+    BOOL isKeySet = WLMicrophonePermission.hasSetPermissionKeyInInfoPlist;
     
     //info.plist文件中已设置key
     if (isKeySet) {
@@ -76,8 +72,6 @@
     if (completion && self.result.shouldCallback) {
         completion(self.result);
     }
-    
-    return self.result.granted;
 }
 
 

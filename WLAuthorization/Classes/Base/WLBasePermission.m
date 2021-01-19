@@ -16,7 +16,7 @@
 
 #pragma mark -
 
-@implementation WLAuthBaseConfig
+@implementation WLAuthConfig
 
 - (instancetype)initWithName:(NSString *)name {
     self = [super init];
@@ -66,7 +66,7 @@
     
     return key;
 }
-+ (BOOL)hasSpecificPermissionKeyFromInfoPlist {
++ (BOOL)hasSetPermissionKeyInInfoPlist {
     NSString *key = [self infoPlistKey];
     id obj = [[NSBundle mainBundle] objectForInfoDictionaryKey:key];
     return (obj != nil);
@@ -87,10 +87,8 @@
 
 #pragma mark -
 
-- (BOOL)requestAuthorization:(WLAuthResultBlock)completion {
+- (void)requestAuthorization:(WLAuthResultBlock)completion {
     _resultBlock = completion;
-    [UIApplication sharedApplication];
-    return [[self class] hasSpecificPermissionKeyFromInfoPlist];
 }
 
 

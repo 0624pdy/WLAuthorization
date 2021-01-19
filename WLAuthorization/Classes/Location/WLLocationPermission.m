@@ -40,24 +40,20 @@
 
 @implementation WLLocationPermission
 
-+ (instancetype)sharedPermission {
-    static WLLocationPermission *permission = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        permission = [[WLLocationPermission alloc] init];
-    });
-    return permission;
-}
+WLSharedPermission(WLLocationPermission)
+
 + (WLAuthorizationType)authorizationType {
     return WLAuthorizationType_Location;
 }
-+ (NSString *)name {
-    return @"位置（定位服务）";
+- (void)requestAuthorization:(WLAuthResultBlock)completion {
+    return [self requestAuthorization:completion withConfig:nil];
 }
-- (BOOL)requestAuthorization:(WLAuthResultBlock)completion withConfig:(void (^)(WLLocationConfig *))config {
+- (void)requestAuthorization:(WLAuthResultBlock)completion withConfig:(void (^)(WLLocationConfig *))config {
+    [super requestAuthorization:completion];
     
-    BOOL isKeySet = [super requestAuthorization:completion];
     self.block_config = config;
+    
+    BOOL isKeySet = WLLocationPermission.hasSetPermissionKeyInInfoPlist;
     
     //info.plist文件中已设置key
     if (isKeySet) {
@@ -91,11 +87,11 @@
     if (completion && self.result.shouldCallback) {
         completion(self.result);
     }
-    
-    return self.result.granted;
 }
-- (BOOL)requestAuthorization:(WLAuthResultBlock)completion {
-    return [self requestAuthorization:completion withConfig:nil];
+- (void)requestTemporaryFullAccuracyAuthorizationWithPurposeKey:(NSString *)purposeKey completion:(void (^)(NSError *))completion {
+    if (@available(iOS 14.0, *)) {
+        [self.locationManager requestTemporaryFullAccuracyAuthorizationWithPurposeKey:purposeKey completion:completion];
+    }
 }
 
 /**
@@ -105,9 +101,9 @@
     switch (status) {
         case kCLAuthorizationStatusNotDetermined: {
             self.result = [WLAuthorizationResult withStatus:WLAuthorizationStatus_NotDetermined message:@"未请求过权限"];
-            if (self.config.requestType == WLAuthRequestType_Always) {
-                [self.locationManager requestAlwaysAuthorization];
-            } else if (self.config.requestType == WLAuthRequestType_WhenInUse) {
+            
+            //总是允许（默认）/使用时允许
+            if (self.config.requestType == WLAuthRequestType_WhenInUse) {
                 [self.locationManager requestWhenInUseAuthorization];
             } else {
                 [self.locationManager requestAlwaysAuthorization];
@@ -136,32 +132,18 @@
         }
             break;
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_8_0
-        case kCLAuthorizationStatusAuthorizedAlways: {
-            if (isCallback) {
-                [self.result updateStatus:WLAuthorizationStatus_Authorized message:@"已授权"];
-            } else {
-                self.result = [WLAuthorizationResult withStatus:WLAuthorizationStatus_Authorized message:@"已授权"];
-            }
-        }
-            break;
-        case kCLAuthorizationStatusAuthorizedWhenInUse: {
-            if (isCallback) {
-                [self.result updateStatus:WLAuthorizationStatus_Authorized message:@"已授权"];
-            } else {
-                self.result = [WLAuthorizationResult withStatus:WLAuthorizationStatus_Authorized message:@"已授权"];
-            }
-        }
-            break;
+        case kCLAuthorizationStatusAuthorizedAlways:
+        case kCLAuthorizationStatusAuthorizedWhenInUse:
 #else
-        case kCLAuthorizationStatusAuthorized: {
+        case kCLAuthorizationStatusAuthorized:
+#endif
+        {
             if (isCallback) {
                 [self.result updateStatus:WLAuthorizationStatus_Authorized message:@"已授权"];
             } else {
                 self.result = [WLAuthorizationResult withStatus:WLAuthorizationStatus_Authorized message:@"已授权"];
             }
         }
-            break;
-#endif
             
         default:
             break;
@@ -196,7 +178,6 @@
     }
 }
 #endif
-
 
 
 

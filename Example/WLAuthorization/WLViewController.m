@@ -48,45 +48,73 @@
 
 - (void)action_request:(id)sender {
     
-    //    [[WLLocationPermission sharedPermission] requestAuthorization:^(WLAuthorizationResult *result) {
-    //        if (result.granted) {
-    //
-    //        }
-    //    } withConfig:^(WLLocationConfig *config) {
-    //        config.openSettings_ifNeeded = YES;
-    //        config.requestType = WLAuthRequestType_Always;
-    //    }];
-        
-    //    [[WLCameraPermission sharedPermission] requestAuthorization:^(WLAuthorizationResult *result) {
-    //        if (result.granted) {
-    //
-    //        }
-    //    } withConfig:^(WLCameraConfig *config) {
-    //        config.openSettings_ifNeeded = YES;
-    //    }];
-        
-    //    [[WLMicrophonePermission sharedPermission] requestAuthorization:^(WLAuthorizationResult *result) {
-    //        if (result.granted) {
-    //
-    //        }
-    //    } withConfig:^(WLMicrophoneConfig *config) {
-    //        config.openSettings_ifNeeded = YES;
-    //    }];
-        
-//        [[WLPhotoLibraryPermission sharedPermission] requestAuthorization:^(WLAuthorizationResult *result) {
-//            if (result) {
-//
-//            }
-//        } withConfig:^(WLPhotoLibraryConfig *config) {
-//            config.openSettings_ifNeeded = YES;
-//            config.accessLevel = WLAuthorizationAccessLevel_WriteOnly;
-//        }];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"请选要请求的权限" message:nil preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:@"定位" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [[WLLocationPermission sharedPermission] requestAuthorization:^(WLAuthorizationResult *result) {
+            if (result.granted) {
+                [[WLLocationPermission sharedPermission] requestTemporaryFullAccuracyAuthorizationWithPurposeKey:@"bbb" completion:^(NSError *error) {
+                    
+                }];
+            }
+        } withConfig:^(WLLocationConfig *config) {
+            config.openSettings_ifNeeded = YES;
+            config.requestType = WLAuthRequestType_Once;
+        }];
+    }]];
+    [alert addAction:[UIAlertAction actionWithTitle:@"相机" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [[WLCameraPermission sharedPermission] requestAuthorization:^(WLAuthorizationResult *result) {
+            if (result.granted) {
+
+            }
+        } withConfig:^(WLCameraConfig *config) {
+            config.openSettings_ifNeeded = YES;
+        }];
+    }]];
+    [alert addAction:[UIAlertAction actionWithTitle:@"麦克风" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [[WLMicrophonePermission sharedPermission] requestAuthorization:^(WLAuthorizationResult *result) {
+            if (result.granted) {
+
+            }
+        } withConfig:^(WLMicrophoneConfig *config) {
+            config.openSettings_ifNeeded = YES;
+        }];
+    }]];
+    [alert addAction:[UIAlertAction actionWithTitle:@"相册" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [[WLPhotoLibraryPermission sharedPermission] requestAuthorization:^(WLAuthorizationResult *result) {
+            if (result) {
+
+            }
+        } withConfig:^(WLPhotoLibraryConfig *config) {
+            config.openSettings_ifNeeded = YES;
+            if (@available(iOS 14, *)) {
+                config.accessLevel = WLAuthorizationAccessLevel_ReadWrite;
+            }
+        }];
+    }]];
+    [alert addAction:[UIAlertAction actionWithTitle:@"通讯录" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [[WLContactPermission sharedPermission] requestAuthorization:^(WLAuthorizationResult *result) {
+            if (result) {
+
+            }
+        } withConfig:^(WLContactConfig *config) {
+            
+        }];
+    }]];
+    [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
+    [self presentViewController:alert animated:YES completion:nil];
     
-    CTCellularData *data = [[CTCellularData alloc] init];
-    data.cellularDataRestrictionDidUpdateNotifier =  ^(CTCellularDataRestrictedState state) {
-        BOOL granted = (state == kCTCellularDataNotRestricted);
-        NSLog(@"相机授权%@", (granted ? @"成功" : @"失败"));
-    };
+        
+    
+        
+    
+        
+        
+    
+//    CTCellularData *data = [[CTCellularData alloc] init];
+//    data.cellularDataRestrictionDidUpdateNotifier = ^(CTCellularDataRestrictedState state) {
+//        BOOL granted = (state == kCTCellularDataNotRestricted);
+//        NSLog(@"相机授权%@", (granted ? @"成功" : @"失败"));
+//    };
 }
 - (void)action_test:(id)sender {
 //    PHPhotoLibrary *library = [PHPhotoLibrary sharedPhotoLibrary];

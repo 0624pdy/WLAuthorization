@@ -15,7 +15,7 @@
 
 
 
-@interface WLAuthBaseConfig : NSObject
+@interface WLAuthConfig : NSObject
 
 /** 权限名称，如：相机、定位、相册 ...... */
 @property (nonatomic,copy) NSString *authName;
@@ -41,7 +41,7 @@
  *
  *  @param completion - 结果回调
  */
-- (BOOL)requestAuthorization:(WLAuthResultBlock)completion;
+- (void)requestAuthorization:(WLAuthResultBlock)completion;
 
 /**
  *  结果回调代码块

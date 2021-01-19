@@ -11,8 +11,8 @@
 @interface WLAuthorizationResult ()
 
 @property (nonatomic,assign) BOOL granted;
-@property (nonatomic,assign) WLAuthorizationStatus previousStatus;  //之前的状态
-@property (nonatomic,assign) WLAuthorizationStatus currentStatus;   //当前状态
+@property (nonatomic,assign) WLAuthorizationStatus previousStatus;
+@property (nonatomic,assign) WLAuthorizationStatus currentStatus;
 @property (nonatomic,copy)   NSString *message;
 
 @end
