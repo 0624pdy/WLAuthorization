@@ -34,6 +34,8 @@
  */
 @property (nonatomic,class,readonly) BOOL hasSetPermissionKeyInInfoPlist;
 
+- (BOOL)hasSetPermissionKey:(NSString *)key;
+
 /**
  *  当权限被禁用时，可以调用该方法展示弹窗询问是否跳转到设置界面
  */

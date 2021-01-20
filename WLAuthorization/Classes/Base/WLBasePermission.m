@@ -60,14 +60,22 @@
         key = @"NSPhotoLibraryUsageDescription";    //NSPhotoLibraryAddUsageDescription
     } else if (type == WLAuthorizationType_Contact) {
         key = @"NSContactsUsageDescription";
+    } else if (type == WLAuthorizationType_Calendar) {
+        key = @"NSCalendarsUsageDescription";
     } else if (type == WLAuthorizationType_Location) {
         key = @"NSLocationAlwaysAndWhenInUseUsageDescription";
+    } else if (type == WLAuthorizationType_Bluetooth) {
+        key = @"NSBluetoothAlwaysUsageDescription";
     }
     
     return key;
 }
 + (BOOL)hasSetPermissionKeyInInfoPlist {
     NSString *key = [self infoPlistKey];
+    id obj = [[NSBundle mainBundle] objectForInfoDictionaryKey:key];
+    return (obj != nil);
+}
+- (BOOL)hasSetPermissionKey:(NSString *)key {
     id obj = [[NSBundle mainBundle] objectForInfoDictionaryKey:key];
     return (obj != nil);
 }

@@ -46,7 +46,7 @@
 	<key>NSBluetoothAlwaysUsageDescription</key>
 	<string>bluetooth</string>
 	<key>NSBluetoothPeripheralUsageDescription</key>
-	<string>bluetooth</string>
+	<string>bluetooth - Peripheral</string>
 	<key>NSCalendarsUsageDescription</key>
 	<string>calendar</string>
 	<key>NSCameraUsageDescription</key>

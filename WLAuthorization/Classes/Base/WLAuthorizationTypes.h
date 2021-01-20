@@ -42,6 +42,10 @@ typedef NS_ENUM(NSInteger, WLAuthorizationType) {
     WLAuthorizationType_PhotoLibrary    = 3,
     /** 通讯录 */
     WLAuthorizationType_Contact         = 4,
+    /** 日历 */
+    WLAuthorizationType_Calendar        = 5,
+    /** 蓝牙 */
+    WLAuthorizationType_Bluetooth       = 6,
     
     /** 定位 */
     WLAuthorizationType_Location        = 10,
@@ -67,6 +71,11 @@ typedef NS_ENUM(NSInteger, WLAuthorizationAccessLevel) {
     WLAuthorizationAccessLevel_ReadWrite    = 0,    //读写
     WLAuthorizationAccessLevel_WriteOnly    = 1,    //只能写入
     WLAuthorizationAccessLevel_ReadOnly     = 2,    //只读读取
+};
+
+typedef NS_ENUM(NSInteger, WLBluetoothManagerType) {
+    WLBluetoothManagerType_Central      = 0,
+    WLBluetoothManagerType_Peripheral   = 1,
 };
 
 typedef void(^WLAuthResultBlock)(WLAuthorizationResult *result);

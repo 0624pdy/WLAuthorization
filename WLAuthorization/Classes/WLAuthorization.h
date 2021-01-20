@@ -16,5 +16,7 @@
 #import "WLPhotoLibraryPermission.h"    //相册
 #import "WLMicrophonePermission.h"      //麦克风
 #import "WLContactPermission.h"         //通讯录
+#import "WLCalendarPermission.h"        //日历
+#import "WLBluetoothPermission.h"       //蓝牙
 
 #endif /* WLAuthorization_h */

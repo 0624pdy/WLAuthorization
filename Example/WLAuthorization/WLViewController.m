@@ -97,7 +97,27 @@
 
             }
         } withConfig:^(WLContactConfig *config) {
-            
+            config.openSettings_ifNeeded = YES;
+        }];
+    }]];
+    [alert addAction:[UIAlertAction actionWithTitle:@"日历" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [[WLCalendarPermission sharedPermission] requestAuthorization:^(WLAuthorizationResult *result) {
+            if (result) {
+
+            }
+        } withConfig:^(WLCalendarConfig *config) {
+            config.openSettings_ifNeeded = YES;
+            config.type = (arc4random() % 2 ? EKEntityTypeEvent : EKEntityTypeReminder);
+        }];
+    }]];
+    [alert addAction:[UIAlertAction actionWithTitle:@"蓝牙" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [[WLBluetoothPermission sharedPermission] requestAuthorization:^(WLAuthorizationResult *result) {
+            if (result) {
+                
+            }
+        } withConfig:^(WLBluetoothConfig *config) {
+            config.openSettings_ifNeeded = YES;
+            config.managerType = WLBluetoothManagerType_Peripheral;
         }];
     }]];
     [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];

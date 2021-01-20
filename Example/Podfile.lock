@@ -5,6 +5,7 @@ PODS:
   - WLAuthorization (0.0.1):
     - WLAuthorization/Base (= 0.0.1)
     - WLAuthorization/Bluetooth (= 0.0.1)
+    - WLAuthorization/Calendar (= 0.0.1)
     - WLAuthorization/Camera (= 0.0.1)
     - WLAuthorization/Contact (= 0.0.1)
     - WLAuthorization/Location (= 0.0.1)
@@ -12,6 +13,8 @@ PODS:
     - WLAuthorization/PhotoLibrary (= 0.0.1)
   - WLAuthorization/Base (0.0.1)
   - WLAuthorization/Bluetooth (0.0.1):
+    - WLAuthorization/Base
+  - WLAuthorization/Calendar (0.0.1):
     - WLAuthorization/Base
   - WLAuthorization/Camera (0.0.1):
     - WLAuthorization/Base
@@ -38,7 +41,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   JLAuthorizationManager: 0e2f3ebe2e0945e314af6f2ba8a4acc4764d530b
-  WLAuthorization: ef59396a59aabff77df8bf722be33b1ad98ee488
+  WLAuthorization: b2452d5fe4df32a26762801f4ec9a9cb43e68b13
 
 PODFILE CHECKSUM: 155551579530af6fd1a2edefa5234025ea5a1619
 

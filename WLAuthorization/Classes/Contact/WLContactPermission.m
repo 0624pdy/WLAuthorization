@@ -48,13 +48,17 @@ WLSharedPermission(WLContactPermission)
     
     //info.plist文件中已设置key
     if (isKeySet) {
-#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_9_0
-        CNAuthorizationStatus status = [CNContactStore authorizationStatusForEntityType:CNEntityTypeContacts];
-        [self handleStatus_iOS_9_:status isCallback:NO];
-#else
-        ABAuthorizationStatus status = ABAddressBookGetAuthorizationStatus();
-        [self handleStatus_iOS_8_:status isCallback:NO];
-#endif
+        if (@available(iOS 9.0, *)) {
+            CNAuthorizationStatus status = [CNContactStore authorizationStatusForEntityType:CNEntityTypeContacts];
+            [self handleStatus_iOS_9_:status isCallback:NO];
+        } else {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+            ABAuthorizationStatus status = ABAddressBookGetAuthorizationStatus();
+            [self handleStatus_iOS_8_:status isCallback:NO];
+#pragma clang diagnostic pop
+        }
+        
     }
     //info.plist文件中未设置key
     else {
@@ -66,6 +70,12 @@ WLSharedPermission(WLContactPermission)
         completion(self.result);
     }
 }
+
+
+
+
+
+#pragma mark -
 
 /**
  *  @param isCallback - 是否是代理的回调
@@ -126,9 +136,65 @@ WLSharedPermission(WLContactPermission)
         }
     }
 }
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 - (void)handleStatus_iOS_8_:(ABAuthorizationStatus)status isCallback:(BOOL)isCallback {
-    
+    switch (status) {
+            
+        case kABAuthorizationStatusNotDetermined: {
+            self.result = [WLAuthorizationResult withStatus:WLAuthorizationStatus_NotDetermined message:@"未请求过权限"];
+
+            ABAddressBookRef addressBook = ABAddressBookCreate();
+            ABAddressBookRequestAccessWithCompletion(addressBook, ^(bool granted, CFErrorRef error) {
+                ABAuthorizationStatus status = ABAddressBookGetAuthorizationStatus();
+                [self handleStatus_iOS_8_:status isCallback:YES];
+            });
+        }
+            break;
+            
+        case kABAuthorizationStatusRestricted: {
+            if (isCallback) {
+                [self.result updateStatus:WLAuthorizationStatus_Disabled message:@"不可用"];
+            } else {
+                self.result = [WLAuthorizationResult withStatus:WLAuthorizationStatus_Disabled message:@"不可用"];
+            }
+        }
+            break;
+            
+        case kABAuthorizationStatusDenied: {
+            if (isCallback) {
+                [self.result updateStatus:WLAuthorizationStatus_Denied message:@"已拒绝"];
+            } else {
+                self.result = [WLAuthorizationResult withStatus:WLAuthorizationStatus_Denied message:@"已拒绝"];
+
+                if (self.config.openSettings_ifNeeded) {
+                    NSString *message = [NSString stringWithFormat:@"您已拒绝APP访问%@，请到\n[设置 - 隐私 - %@]\n中允许访问%@", self.config.authName, self.config.authName, self.config.authName];
+                    [self alertWithMessage:message cancel:@"取消" confirmTitle:@"去设置"];
+                }
+            }
+        }
+            break;
+
+        case kABAuthorizationStatusAuthorized: {
+            if (isCallback) {
+                [self.result updateStatus:WLAuthorizationStatus_Authorized message:@"已授权"];
+            } else {
+                self.result = [WLAuthorizationResult withStatus:WLAuthorizationStatus_Authorized message:@"已授权"];
+            }
+        }
+
+        default:
+            break;
+    }
+
+    if (isCallback && self.result.previousStatus != self.result.currentStatus) {
+        //回调
+        if (self.resultBlock) {
+            self.resultBlock(self.result);
+        }
+    }
 }
+#pragma clang diagnostic pop
 
 
 

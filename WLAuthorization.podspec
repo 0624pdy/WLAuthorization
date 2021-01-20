@@ -46,42 +46,49 @@ Pod::Spec.new do |s|
   #MARK: 🧭 定位
   s.subspec 'Location' do |location|
       location.frameworks   = 'CoreLocation'
-      location.dependency 'WLAuthorization/Base'
+      location.dependency     'WLAuthorization/Base'
       location.source_files = 'WLAuthorization/Classes/Location/*'
   end
   
   #MARK: 📷 相机
   s.subspec 'Camera' do |camera|
       camera.frameworks   = 'AVFoundation'
-      camera.dependency 'WLAuthorization/Base'
+      camera.dependency     'WLAuthorization/Base'
       camera.source_files = 'WLAuthorization/Classes/Camera/*'
   end
   
   #MARK: 🎤 麦克风
   s.subspec 'Microphone' do |microphone|
       microphone.frameworks   = 'AVFoundation'
-      microphone.dependency 'WLAuthorization/Base'
+      microphone.dependency     'WLAuthorization/Base'
       microphone.source_files = 'WLAuthorization/Classes/Microphone/*'
   end
   
   #MARK: 📖 相册
   s.subspec 'PhotoLibrary' do |photoLibrary|
       photoLibrary.frameworks   = 'AssetsLibrary', 'Photos'
-      photoLibrary.dependency 'WLAuthorization/Base'
+      photoLibrary.dependency     'WLAuthorization/Base'
       photoLibrary.source_files = 'WLAuthorization/Classes/PhotoLibrary/*'
   end
   
   #MARK: 📖 通讯录
   s.subspec 'Contact' do |contact|
-      contact.frameworks   = 'AVFoundation'
-      contact.dependency 'WLAuthorization/Base'
+      contact.frameworks   = 'Contacts', 'AddressBook'
+      contact.dependency     'WLAuthorization/Base'
       contact.source_files = 'WLAuthorization/Classes/Contact/*'
+  end
+  
+  #MARK: 📅 日历 - 事件、提醒
+  s.subspec 'Calendar' do |calendar|
+      calendar.frameworks   = 'EventKit'
+      calendar.dependency     'WLAuthorization/Base'
+      calendar.source_files = 'WLAuthorization/Classes/Calendar/*'
   end
   
   #MARK: 📶 蓝牙
   s.subspec 'Bluetooth' do |bluetooth|
-      bluetooth.frameworks   = 'AVFoundation'
-      bluetooth.dependency 'WLAuthorization/Base'
+      bluetooth.frameworks   = 'CoreBluetooth'
+      bluetooth.dependency     'WLAuthorization/Base'
       bluetooth.source_files = 'WLAuthorization/Classes/Bluetooth/*'
   end
   
