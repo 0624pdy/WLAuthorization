@@ -117,7 +117,7 @@
             }
         } withConfig:^(WLBluetoothConfig *config) {
             config.openSettings_ifNeeded = YES;
-            config.managerType = WLBluetoothManagerType_Peripheral;
+            config.role = WLBluetoothRole_Central;
         }];
     }]];
     [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];

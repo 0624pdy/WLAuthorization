@@ -19,7 +19,7 @@
 - (instancetype)initWithName:(NSString *)name {
     self = [super initWithName:name];
     if (self) {
-        _managerType = WLBluetoothManagerType_Central;
+        _role = WLBluetoothRole_Central;
     }
     return self;
 }
@@ -55,19 +55,19 @@ WLSharedPermission(WLBluetoothPermission)
     
     self.block_config = config;
     
-    WLBluetoothManagerType managerType = self.config.managerType;
+    WLBluetoothRole role = self.config.role;
     
     BOOL isKeySet = NO;
-    if (managerType == WLBluetoothManagerType_Central) {
+    if (role == WLBluetoothRole_Central) {
         isKeySet = [self hasSetPermissionKey:@"NSBluetoothAlwaysUsageDescription"];
-    } else if (managerType == WLBluetoothManagerType_Peripheral) {
+    } else if (role == WLBluetoothRole_Peripheral) {
         isKeySet = [self hasSetPermissionKey:@"NSBluetoothPeripheralUsageDescription"];
     }
     
     //info.plist文件中已设置key
     if (isKeySet) {
 
-        if (managerType == WLBluetoothManagerType_Central) {
+        if (role == WLBluetoothRole_Central) {
             if (@available(iOS 13.0, *)) {
                 
                 CBManagerAuthorization status;
@@ -87,9 +87,13 @@ WLSharedPermission(WLBluetoothPermission)
                 _centralManager = nil;
                 [self handleStatus_iOS_10_:status isCallback:NO];
                 
+            } else {
+                
+                
+                
             }
         }
-        else if (managerType == WLBluetoothManagerType_Peripheral) {
+        else if (role == WLBluetoothRole_Peripheral) {
             if (@available(iOS 13.0, *)) {
                 
                 CBManagerAuthorization status;
@@ -142,7 +146,7 @@ WLSharedPermission(WLBluetoothPermission)
         case CBManagerAuthorizationNotDetermined: {
             self.result = [WLAuthorizationResult withStatus:WLAuthorizationStatus_NotDetermined message:@"未请求过权限"];
 
-            if (self.config.managerType == WLBluetoothManagerType_Central) {
+            if (self.config.role == WLBluetoothRole_Central) {
                 _centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:dispatch_get_main_queue()];
             } else {
                 _peripheralManager = [[CBPeripheralManager alloc] initWithDelegate:self queue:dispatch_get_main_queue()];

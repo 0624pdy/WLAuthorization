@@ -73,9 +73,9 @@ typedef NS_ENUM(NSInteger, WLAuthorizationAccessLevel) {
     WLAuthorizationAccessLevel_ReadOnly     = 2,    //只读读取
 };
 
-typedef NS_ENUM(NSInteger, WLBluetoothManagerType) {
-    WLBluetoothManagerType_Central      = 0,
-    WLBluetoothManagerType_Peripheral   = 1,
+typedef NS_ENUM(NSInteger, WLBluetoothRole) {
+    WLBluetoothRole_Central     = 0,    //中心
+    WLBluetoothRole_Peripheral  = 1,    //外设
 };
 
 typedef void(^WLAuthResultBlock)(WLAuthorizationResult *result);

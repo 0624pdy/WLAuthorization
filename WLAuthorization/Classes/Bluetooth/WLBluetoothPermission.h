@@ -14,7 +14,7 @@
 
 @interface WLBluetoothConfig : WLAuthConfig
 
-@property (nonatomic,assign) WLBluetoothManagerType managerType;
+@property (nonatomic,assign) WLBluetoothRole role;
 
 @end
 
